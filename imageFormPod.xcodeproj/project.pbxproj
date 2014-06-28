@@ -22,6 +22,8 @@
 		BAFC8013195F6F6F00E7B494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAFC8011195F6F6F00E7B494 /* InfoPlist.strings */; };
 		BAFC8015195F6F6F00E7B494 /* imageFormPodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8014195F6F6F00E7B494 /* imageFormPodTests.m */; };
 		BAFC8021195F731C00E7B494 /* InformationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8020195F731C00E7B494 /* InformationForm.m */; };
+		BAFC8025195F75B400E7B494 /* DateCellInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8024195F75B400E7B494 /* DateCellInformation.m */; };
+		BAFC8028195F761100E7B494 /* ImageFormConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8027195F761100E7B494 /* ImageFormConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		BAFC8014195F6F6F00E7B494 /* imageFormPodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = imageFormPodTests.m; sourceTree = "<group>"; };
 		BAFC801F195F731C00E7B494 /* InformationForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InformationForm.h; path = FormClasses/InformationForm.h; sourceTree = "<group>"; };
 		BAFC8020195F731C00E7B494 /* InformationForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InformationForm.m; path = FormClasses/InformationForm.m; sourceTree = "<group>"; };
+		BAFC8023195F75B400E7B494 /* DateCellInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateCellInformation.h; path = FormClasses/DateCellInformation.h; sourceTree = "<group>"; };
+		BAFC8024195F75B400E7B494 /* DateCellInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateCellInformation.m; path = FormClasses/DateCellInformation.m; sourceTree = "<group>"; };
+		BAFC8026195F761100E7B494 /* ImageFormConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageFormConstants.h; path = FormClasses/ImageFormConstants.h; sourceTree = "<group>"; };
+		BAFC8027195F761100E7B494 /* ImageFormConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageFormConstants.m; path = FormClasses/ImageFormConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +165,30 @@
 		BAFC801E195F72D200E7B494 /* imageFormView */ = {
 			isa = PBXGroup;
 			children = (
+				BAFC8026195F761100E7B494 /* ImageFormConstants.h */,
+				BAFC8027195F761100E7B494 /* ImageFormConstants.m */,
 				BAFC801F195F731C00E7B494 /* InformationForm.h */,
 				BAFC8020195F731C00E7B494 /* InformationForm.m */,
+				BAFC8029195F767200E7B494 /* Cell Types */,
+				BAFC8022195F759100E7B494 /* Information Types */,
 			);
 			name = imageFormView;
+			sourceTree = "<group>";
+		};
+		BAFC8022195F759100E7B494 /* Information Types */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC8023195F75B400E7B494 /* DateCellInformation.h */,
+				BAFC8024195F75B400E7B494 /* DateCellInformation.m */,
+			);
+			name = "Information Types";
+			sourceTree = "<group>";
+		};
+		BAFC8029195F767200E7B494 /* Cell Types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Cell Types";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFC8025195F75B400E7B494 /* DateCellInformation.m in Sources */,
+				BAFC8028195F761100E7B494 /* ImageFormConstants.m in Sources */,
 				BAFC8000195F6F6F00E7B494 /* ViewController.m in Sources */,
 				BAFC7FFA195F6F6F00E7B494 /* AppDelegate.m in Sources */,
 				BAFC8021195F731C00E7B494 /* InformationForm.m in Sources */,
