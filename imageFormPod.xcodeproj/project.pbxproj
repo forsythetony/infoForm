@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAFC7FEA195F6F6F00E7B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */; };
+		BAFC7FEC195F6F6F00E7B494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */; };
+		BAFC7FEE195F6F6F00E7B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FED195F6F6F00E7B494 /* UIKit.framework */; };
+		BAFC7FF4195F6F6F00E7B494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAFC7FF2195F6F6F00E7B494 /* InfoPlist.strings */; };
+		BAFC7FF6195F6F6F00E7B494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC7FF5195F6F6F00E7B494 /* main.m */; };
+		BAFC7FFA195F6F6F00E7B494 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC7FF9195F6F6F00E7B494 /* AppDelegate.m */; };
+		BAFC7FFD195F6F6F00E7B494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFC7FFB195F6F6F00E7B494 /* Main.storyboard */; };
+		BAFC8000195F6F6F00E7B494 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC7FFF195F6F6F00E7B494 /* ViewController.m */; };
+		BAFC8002195F6F6F00E7B494 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFC8001195F6F6F00E7B494 /* Images.xcassets */; };
+		BAFC8009195F6F6F00E7B494 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC8008195F6F6F00E7B494 /* XCTest.framework */; };
+		BAFC800A195F6F6F00E7B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */; };
+		BAFC800B195F6F6F00E7B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FED195F6F6F00E7B494 /* UIKit.framework */; };
+		BAFC8013195F6F6F00E7B494 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAFC8011195F6F6F00E7B494 /* InfoPlist.strings */; };
+		BAFC8015195F6F6F00E7B494 /* imageFormPodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8014195F6F6F00E7B494 /* imageFormPodTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAFC800C195F6F6F00E7B494 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAFC7FDE195F6F6F00E7B494 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAFC7FE5195F6F6F00E7B494;
+			remoteInfo = imageFormPod;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAFC7FE6195F6F6F00E7B494 /* imageFormPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFormPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BAFC7FED195F6F6F00E7B494 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BAFC7FF1195F6F6F00E7B494 /* imageFormPod-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "imageFormPod-Info.plist"; sourceTree = "<group>"; };
+		BAFC7FF3195F6F6F00E7B494 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BAFC7FF5195F6F6F00E7B494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAFC7FF7195F6F6F00E7B494 /* imageFormPod-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "imageFormPod-Prefix.pch"; sourceTree = "<group>"; };
+		BAFC7FF8195F6F6F00E7B494 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAFC7FF9195F6F6F00E7B494 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BAFC7FFC195F6F6F00E7B494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAFC7FFE195F6F6F00E7B494 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BAFC7FFF195F6F6F00E7B494 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BAFC8001195F6F6F00E7B494 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BAFC8007195F6F6F00E7B494 /* imageFormPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imageFormPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFC8008195F6F6F00E7B494 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BAFC8010195F6F6F00E7B494 /* imageFormPodTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "imageFormPodTests-Info.plist"; sourceTree = "<group>"; };
+		BAFC8012195F6F6F00E7B494 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BAFC8014195F6F6F00E7B494 /* imageFormPodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = imageFormPodTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAFC7FE3195F6F6F00E7B494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC7FEC195F6F6F00E7B494 /* CoreGraphics.framework in Frameworks */,
+				BAFC7FEE195F6F6F00E7B494 /* UIKit.framework in Frameworks */,
+				BAFC7FEA195F6F6F00E7B494 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFC8004195F6F6F00E7B494 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC8009195F6F6F00E7B494 /* XCTest.framework in Frameworks */,
+				BAFC800B195F6F6F00E7B494 /* UIKit.framework in Frameworks */,
+				BAFC800A195F6F6F00E7B494 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAFC7FDD195F6F6F00E7B494 = {
+			isa = PBXGroup;
+			children = (
+				BAFC7FEF195F6F6F00E7B494 /* imageFormPod */,
+				BAFC800E195F6F6F00E7B494 /* imageFormPodTests */,
+				BAFC7FE8195F6F6F00E7B494 /* Frameworks */,
+				BAFC7FE7195F6F6F00E7B494 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAFC7FE7195F6F6F00E7B494 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC7FE6195F6F6F00E7B494 /* imageFormPod.app */,
+				BAFC8007195F6F6F00E7B494 /* imageFormPodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAFC7FE8195F6F6F00E7B494 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */,
+				BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */,
+				BAFC7FED195F6F6F00E7B494 /* UIKit.framework */,
+				BAFC8008195F6F6F00E7B494 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAFC7FEF195F6F6F00E7B494 /* imageFormPod */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC7FF8195F6F6F00E7B494 /* AppDelegate.h */,
+				BAFC7FF9195F6F6F00E7B494 /* AppDelegate.m */,
+				BAFC7FFB195F6F6F00E7B494 /* Main.storyboard */,
+				BAFC7FFE195F6F6F00E7B494 /* ViewController.h */,
+				BAFC7FFF195F6F6F00E7B494 /* ViewController.m */,
+				BAFC8001195F6F6F00E7B494 /* Images.xcassets */,
+				BAFC7FF0195F6F6F00E7B494 /* Supporting Files */,
+			);
+			path = imageFormPod;
+			sourceTree = "<group>";
+		};
+		BAFC7FF0195F6F6F00E7B494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC7FF1195F6F6F00E7B494 /* imageFormPod-Info.plist */,
+				BAFC7FF2195F6F6F00E7B494 /* InfoPlist.strings */,
+				BAFC7FF5195F6F6F00E7B494 /* main.m */,
+				BAFC7FF7195F6F6F00E7B494 /* imageFormPod-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAFC800E195F6F6F00E7B494 /* imageFormPodTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC8014195F6F6F00E7B494 /* imageFormPodTests.m */,
+				BAFC800F195F6F6F00E7B494 /* Supporting Files */,
+			);
+			path = imageFormPodTests;
+			sourceTree = "<group>";
+		};
+		BAFC800F195F6F6F00E7B494 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC8010195F6F6F00E7B494 /* imageFormPodTests-Info.plist */,
+				BAFC8011195F6F6F00E7B494 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAFC7FE5195F6F6F00E7B494 /* imageFormPod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFC8018195F6F7000E7B494 /* Build configuration list for PBXNativeTarget "imageFormPod" */;
+			buildPhases = (
+				BAFC7FE2195F6F6F00E7B494 /* Sources */,
+				BAFC7FE3195F6F6F00E7B494 /* Frameworks */,
+				BAFC7FE4195F6F6F00E7B494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imageFormPod;
+			productName = imageFormPod;
+			productReference = BAFC7FE6195F6F6F00E7B494 /* imageFormPod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAFC8006195F6F6F00E7B494 /* imageFormPodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFC801B195F6F7000E7B494 /* Build configuration list for PBXNativeTarget "imageFormPodTests" */;
+			buildPhases = (
+				BAFC8003195F6F6F00E7B494 /* Sources */,
+				BAFC8004195F6F6F00E7B494 /* Frameworks */,
+				BAFC8005195F6F6F00E7B494 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAFC800D195F6F6F00E7B494 /* PBXTargetDependency */,
+			);
+			name = imageFormPodTests;
+			productName = imageFormPodTests;
+			productReference = BAFC8007195F6F6F00E7B494 /* imageFormPodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAFC7FDE195F6F6F00E7B494 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Tonyf;
+				TargetAttributes = {
+					BAFC8006195F6F6F00E7B494 = {
+						TestTargetID = BAFC7FE5195F6F6F00E7B494;
+					};
+				};
+			};
+			buildConfigurationList = BAFC7FE1195F6F6F00E7B494 /* Build configuration list for PBXProject "imageFormPod" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAFC7FDD195F6F6F00E7B494;
+			productRefGroup = BAFC7FE7195F6F6F00E7B494 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAFC7FE5195F6F6F00E7B494 /* imageFormPod */,
+				BAFC8006195F6F6F00E7B494 /* imageFormPodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAFC7FE4195F6F6F00E7B494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC8002195F6F6F00E7B494 /* Images.xcassets in Resources */,
+				BAFC7FF4195F6F6F00E7B494 /* InfoPlist.strings in Resources */,
+				BAFC7FFD195F6F6F00E7B494 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFC8005195F6F6F00E7B494 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC8013195F6F6F00E7B494 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAFC7FE2195F6F6F00E7B494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC8000195F6F6F00E7B494 /* ViewController.m in Sources */,
+				BAFC7FFA195F6F6F00E7B494 /* AppDelegate.m in Sources */,
+				BAFC7FF6195F6F6F00E7B494 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFC8003195F6F6F00E7B494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC8015195F6F6F00E7B494 /* imageFormPodTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAFC800D195F6F6F00E7B494 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAFC7FE5195F6F6F00E7B494 /* imageFormPod */;
+			targetProxy = BAFC800C195F6F6F00E7B494 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAFC7FF2195F6F6F00E7B494 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAFC7FF3195F6F6F00E7B494 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BAFC7FFB195F6F6F00E7B494 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAFC7FFC195F6F6F00E7B494 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAFC8011195F6F6F00E7B494 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAFC8012195F6F6F00E7B494 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAFC8016195F6F7000E7B494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		BAFC8017195F6F7000E7B494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAFC8019195F6F7000E7B494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "imageFormPod/imageFormPod-Prefix.pch";
+				INFOPLIST_FILE = "imageFormPod/imageFormPod-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BAFC801A195F6F7000E7B494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "imageFormPod/imageFormPod-Prefix.pch";
+				INFOPLIST_FILE = "imageFormPod/imageFormPod-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BAFC801C195F6F7000E7B494 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/imageFormPod.app/imageFormPod";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "imageFormPod/imageFormPod-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "imageFormPodTests/imageFormPodTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BAFC801D195F6F7000E7B494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/imageFormPod.app/imageFormPod";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "imageFormPod/imageFormPod-Prefix.pch";
+				INFOPLIST_FILE = "imageFormPodTests/imageFormPodTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAFC7FE1195F6F6F00E7B494 /* Build configuration list for PBXProject "imageFormPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFC8016195F6F7000E7B494 /* Debug */,
+				BAFC8017195F6F7000E7B494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAFC8018195F6F7000E7B494 /* Build configuration list for PBXNativeTarget "imageFormPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFC8019195F6F7000E7B494 /* Debug */,
+				BAFC801A195F6F7000E7B494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BAFC801B195F6F7000E7B494 /* Build configuration list for PBXNativeTarget "imageFormPodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFC801C195F6F7000E7B494 /* Debug */,
+				BAFC801D195F6F7000E7B494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAFC7FDE195F6F6F00E7B494 /* Project object */;
+}
