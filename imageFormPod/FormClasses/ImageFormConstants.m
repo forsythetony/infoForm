@@ -7,7 +7,16 @@
 //
 
 #import "ImageFormConstants.h"
+#import "NSDate+timelineStuff.h"
 
 @implementation ImageFormConstants
 
++(NSDate *)maximumDate
+{
+    return [NSDate date];
+}
++(NSDate *)minimumDate
+{
+    return [NSDate dateWithv1String:@"01/01/1500"];
+}
 @end

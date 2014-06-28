@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
+#import "ImageFormConstants.h"
+#import "CellInformation.h"
+#import "Cells/DateCell.h"
 
 @interface InformationForm : UITableViewController
+
+@property (strong, nonatomic) NSArray* currentCells;
+
+
+-(void)addCellWithInformation:(CellInformation*) information;
 
 @end
