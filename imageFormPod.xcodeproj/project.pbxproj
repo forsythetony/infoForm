@@ -27,9 +27,9 @@
 		BAFC8031195F777400E7B494 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFC802F195F777400E7B494 /* DateCell.xib */; };
 		BAFC803D195F7BCB00E7B494 /* CellInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC803C195F7BCB00E7B494 /* CellInformation.m */; };
 		BAFC8044195F898900E7B494 /* NSDate+timelineStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */; };
-		BAFC8048195F8BA700E7B494 /* BasicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8046195F8BA700E7B494 /* BasicCell.m */; };
-		BAFC8049195F8BA700E7B494 /* BasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFC8047195F8BA700E7B494 /* BasicCell.xib */; };
 		BAFC804C195F90AC00E7B494 /* Styler.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC804B195F90AC00E7B494 /* Styler.m */; };
+		BAFC8050195F957200E7B494 /* BasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFC804D195F957200E7B494 /* BasicCell.xib */; };
+		BAFC8051195F957200E7B494 /* BasicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC804F195F957200E7B494 /* BasicCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,11 +73,11 @@
 		BAFC803C195F7BCB00E7B494 /* CellInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellInformation.m; path = FormClasses/CellInformation.m; sourceTree = "<group>"; };
 		BAFC8042195F898900E7B494 /* NSDate+timelineStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+timelineStuff.h"; path = "FormClasses/Utilities/NSDate+timelineStuff.h"; sourceTree = "<group>"; };
 		BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+timelineStuff.m"; path = "FormClasses/Utilities/NSDate+timelineStuff.m"; sourceTree = "<group>"; };
-		BAFC8045195F8BA700E7B494 /* BasicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicCell.h; sourceTree = "<group>"; };
-		BAFC8046195F8BA700E7B494 /* BasicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicCell.m; sourceTree = "<group>"; };
-		BAFC8047195F8BA700E7B494 /* BasicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicCell.xib; sourceTree = "<group>"; };
 		BAFC804A195F90AC00E7B494 /* Styler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Styler.h; path = FormClasses/Utilities/Styler.h; sourceTree = "<group>"; };
 		BAFC804B195F90AC00E7B494 /* Styler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Styler.m; path = FormClasses/Utilities/Styler.m; sourceTree = "<group>"; };
+		BAFC804D195F957200E7B494 /* BasicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicCell.xib; path = FormClasses/BasicCell.xib; sourceTree = "<group>"; };
+		BAFC804E195F957200E7B494 /* BasicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicCell.h; path = FormClasses/BasicCell.h; sourceTree = "<group>"; };
+		BAFC804F195F957200E7B494 /* BasicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicCell.m; path = FormClasses/BasicCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,12 +204,12 @@
 		BAFC8029195F767200E7B494 /* Cell Types */ = {
 			isa = PBXGroup;
 			children = (
+				BAFC804D195F957200E7B494 /* BasicCell.xib */,
+				BAFC804E195F957200E7B494 /* BasicCell.h */,
+				BAFC804F195F957200E7B494 /* BasicCell.m */,
 				BAFC802D195F777400E7B494 /* DateCell.h */,
 				BAFC802E195F777400E7B494 /* DateCell.m */,
 				BAFC802F195F777400E7B494 /* DateCell.xib */,
-				BAFC8045195F8BA700E7B494 /* BasicCell.h */,
-				BAFC8046195F8BA700E7B494 /* BasicCell.m */,
-				BAFC8047195F8BA700E7B494 /* BasicCell.xib */,
 			);
 			name = "Cell Types";
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 				BAFC7FF4195F6F6F00E7B494 /* InfoPlist.strings in Resources */,
 				BAFC7FFD195F6F6F00E7B494 /* Main.storyboard in Resources */,
 				BAFC8031195F777400E7B494 /* DateCell.xib in Resources */,
-				BAFC8049195F8BA700E7B494 /* BasicCell.xib in Resources */,
+				BAFC8050195F957200E7B494 /* BasicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,9 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFC8051195F957200E7B494 /* BasicCell.m in Sources */,
 				BAFC803D195F7BCB00E7B494 /* CellInformation.m in Sources */,
 				BAFC8028195F761100E7B494 /* ImageFormConstants.m in Sources */,
-				BAFC8048195F8BA700E7B494 /* BasicCell.m in Sources */,
 				BAFC8044195F898900E7B494 /* NSDate+timelineStuff.m in Sources */,
 				BAFC804C195F90AC00E7B494 /* Styler.m in Sources */,
 				BAFC8030195F777400E7B494 /* DateCell.m in Sources */,
