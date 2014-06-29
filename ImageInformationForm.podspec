@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/forsythetony/infoForm.git", :tag => "0.1" }
 
-  s.source_files  = "FormClasses ", "imageFormPod/FormClasses/*.{h,m}"
+  s.source_files  = "FormClasses ", "imageFormPod/FormClasses/**/*.{h,m}"
 
   s.requires_arc = true
 
