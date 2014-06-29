@@ -18,11 +18,14 @@
 -(void)configureDatePicker
 {
     _fieldDatePicker.datePickerMode = UIDatePickerModeDate;
+    _fieldDatePicker.maximumDate = [ImageFormConstants maximumDate];
+    _fieldDatePicker.minimumDate = [ImageFormConstants minimumDate];
+    
     
 }
 -(void)configureTitleLabel
 {
-    _fieldTitleLabel.textAlignment = NSTextAlignmentCenter;
+    _fieldTitleLabel.textAlignment = NSTextAlignmentRight;
     _fieldTitleLabel.font = [UIFont fontWithName:@"DinAlternate-Bold" size:30.0];
 }
 -(void)initialSetup

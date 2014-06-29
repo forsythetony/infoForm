@@ -14,14 +14,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
-                        <rect key="frame" x="0.0" y="0.0" width="170" height="215"/>
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="215"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-UB-fhQ">
-                        <rect key="frame" x="170" y="0.0" width="400" height="216"/>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-UB-fhQ">
+                        <rect key="frame" x="170" y="-1" width="400" height="216"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="400" id="rmb-Hq-2JZ"/>
@@ -53,7 +53,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </datePicker>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fFy-UB-fhQ" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" id="Drz-im-G2A"/>
+                    <constraint firstItem="fFy-UB-fhQ" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="30" id="Drz-im-G2A"/>
                     <constraint firstAttribute="bottom" secondItem="8Zz-tJ-7YO" secondAttribute="bottom" id="GQD-6K-tsa"/>
                     <constraint firstAttribute="bottom" secondItem="fFy-UB-fhQ" secondAttribute="bottom" id="ZDU-OQ-XqL"/>
                     <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aNB-vz-Lh1"/>

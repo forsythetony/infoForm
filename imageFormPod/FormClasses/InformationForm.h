@@ -10,12 +10,13 @@
 #import "ImageFormConstants.h"
 #import "CellInformation.h"
 #import "Cells/DateCell.h"
+#import "BasicCell.h"
+#import "Styler.h"
 
 @interface InformationForm : UITableViewController
 
 @property (strong, nonatomic) NSArray* currentCells;
-
+@property (strong, nonatomic) Styler* myStyler;
 
 -(void)addCellWithInformation:(CellInformation*) information;
-
 @end

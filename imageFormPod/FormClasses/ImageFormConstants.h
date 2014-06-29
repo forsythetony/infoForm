@@ -10,7 +10,7 @@
 
 
 #define DateCellHeight      216.0
-#define BasicCellHeight     40.0
+#define BasicCellHeight     100.0
 #define DefaultHeight       40.0
 
 #define DateCellFrame       CGRectMake(0.0, 0.0, self.tableView.frame.size.width, DateCellHeight)

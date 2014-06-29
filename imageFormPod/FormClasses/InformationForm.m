@@ -33,6 +33,8 @@
 -(void)viewDidAppear:(BOOL)animated
 {
         [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Starting Date" andDate:[NSDate date]]];
+        [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Basic Title" andPlaceholderValue:@"None"]];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,26 +108,57 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"DateCell";
+    static NSString *dateCellIdentifier = @"DateCell";
+    static NSString *basicCellIdentifier = @"BasicCell";
     
     CellInformation *info = _currentCells[indexPath.row];
 
-    DateCell *customCell = (DateCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (customCell == nil) {
-        UINib* customCellNib = [UINib nibWithNibName:@"DateCell" bundle:nil];
-        
-        [tableView registerNib:customCellNib forCellReuseIdentifier:cellIdentifier];
-        
-        customCell = (DateCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-        
-    }
-    
-    [customCell setInformation:info];
-    
-    
-    return customCell;
+    switch (info.type) {
+        case cellTypeBasicText: {
+            
+            BasicCell *cell = [tableView dequeueReusableCellWithIdentifier:basicCellIdentifier];
+            
+            if (cell == nil) {
+                UINib* basicCellNib = [UINib nibWithNibName:@"BasicCell" bundle:nil];
+                
+                [tableView registerNib:basicCellNib forCellReuseIdentifier:basicCellIdentifier];
+                
+                cell = (BasicCell*)[tableView dequeueReusableCellWithIdentifier:basicCellIdentifier];
+                
+            }
+            
+            [cell setInformation:info];
+            
+            return cell;
+        }
+            break;
+            
+        case cellTypeDate: {
+            
+            DateCell *customCell = (DateCell*)[tableView dequeueReusableCellWithIdentifier:dateCellIdentifier];
+            
+            if (customCell == nil) {
+                UINib* customCellNib = [UINib nibWithNibName:@"DateCell" bundle:nil];
+                
+                [tableView registerNib:customCellNib forCellReuseIdentifier:dateCellIdentifier];
+                
+                customCell = (DateCell*)[tableView dequeueReusableCellWithIdentifier:dateCellIdentifier];
+                
+            }
+            
+            [customCell setInformation:info];
+            
+            return customCell;
 
+        }
+            break;
+            
+        default: {
+            
+            return nil;
+        }
+            break;
+    }
 }
 
 @end

@@ -15,7 +15,9 @@
 
 @property (strong, nonatomic) NSString* fieldTitle;
 @property (strong, nonatomic) id    fieldValue;
+@property (strong, nonatomic) id    placeHolderValue;
 
 +(CellInformation*)createDateCellWithTitle:(NSString*) title andDate:(NSDate*) date;
++(CellInformation*)createBasicCellWithTitle:(NSString*) title andPlaceholderValue:(NSString*) placeholder;
 
 @end

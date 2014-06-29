@@ -14,8 +14,6 @@
 
 @property (strong, nonatomic) CellInformation* information;
 
-
-
 @property (weak, nonatomic) IBOutlet UILabel *fieldTitleLabel;
 @property (weak, nonatomic) IBOutlet UIDatePicker *fieldDatePicker;
 
