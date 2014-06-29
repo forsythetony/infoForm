@@ -16,5 +16,18 @@
 +(UIFont*)basicCellTitleFont;
 +(UIFont*)basicCellTextValueFont;
 
+/*
+    Date Cell Style Attributes
+*/
+
+//  Fonts
 +(UIFont*)dateCellTitleFont;
+
+//  Colors
++(UIColor*)dateCellTitleBackgroundColor;
++(UIColor*)dateCellTitleTextColor;
+
++(UIColor*)dateCellValueBackgroundColor;
++(UIColor*)dateCellValueTextColor;
+
 @end

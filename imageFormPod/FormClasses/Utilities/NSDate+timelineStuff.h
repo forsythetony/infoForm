@@ -29,7 +29,6 @@ typedef NS_ENUM(NSInteger, sDateType) {
 -(NSTimeInterval)timeIntervalSinceBeginning;
 
 -(NSString*)displayDateOfType:(sDateType) dateType;
-
 -(NSNumber*)yearAsNumber;
 
 

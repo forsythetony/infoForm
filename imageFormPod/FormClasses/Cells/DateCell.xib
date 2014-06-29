@@ -6,64 +6,46 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="216" id="KGk-i7-Jjw" customClass="DateCell">
-            <rect key="frame" x="0.0" y="0.0" width="570" height="216"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="35" id="KGk-i7-Jjw" customClass="DateCell">
+            <rect key="frame" x="0.0" y="0.0" width="570" height="35"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="570" height="215"/>
+                <rect key="frame" x="0.0" y="0.0" width="570" height="34"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
-                        <rect key="frame" x="0.0" y="0.0" width="140" height="215"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="dateTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
+                        <rect key="frame" x="0.0" y="0.0" width="148" height="35"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.58846382470000003" green="0.14277563909999999" blue="0.1155509473" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="148" id="nVz-WV-TUA"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-UB-fhQ">
-                        <rect key="frame" x="170" y="-1" width="400" height="216"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="400" id="rmb-Hq-2JZ"/>
-                        </constraints>
-                        <date key="date" timeIntervalSinceReferenceDate="425688480.78523302">
-                            <!--2014-06-28 22:48:00 +0000-->
-                        </date>
-                        <timeZone key="timeZone" name="America/Los_Angeles">
-                            <mutableData key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
-                        </timeZone>
-                    </datePicker>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="dateValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-m3-EZl">
+                        <rect key="frame" x="166" y="0.0" width="404" height="35"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.019607843829999999" green="0.73333334920000004" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fFy-UB-fhQ" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="30" id="Drz-im-G2A"/>
-                    <constraint firstAttribute="bottom" secondItem="8Zz-tJ-7YO" secondAttribute="bottom" id="GQD-6K-tsa"/>
-                    <constraint firstAttribute="bottom" secondItem="fFy-UB-fhQ" secondAttribute="bottom" id="ZDU-OQ-XqL"/>
-                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aNB-vz-Lh1"/>
-                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bQV-Al-H4F"/>
-                    <constraint firstAttribute="trailing" secondItem="fFy-UB-fhQ" secondAttribute="trailing" id="iSA-VE-eQC"/>
+                    <constraint firstAttribute="trailing" secondItem="sgS-m3-EZl" secondAttribute="trailing" id="3ib-Y5-8ak"/>
+                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7Nf-cq-DZb"/>
+                    <constraint firstItem="sgS-m3-EZl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CnB-nk-jlW"/>
+                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="15" id="MeK-lo-iLC"/>
+                    <constraint firstAttribute="bottom" secondItem="sgS-m3-EZl" secondAttribute="bottom" id="epb-Ta-aBY"/>
+                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iYK-ya-392"/>
+                    <constraint firstAttribute="bottom" secondItem="8Zz-tJ-7YO" secondAttribute="bottom" id="rcp-Rf-Qgq"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="fieldDatePicker" destination="fFy-UB-fhQ" id="gYw-sg-RP8"/>
                 <outlet property="fieldTitleLabel" destination="8Zz-tJ-7YO" id="8pS-LP-fBf"/>
+                <outlet property="fieldValueLabel" destination="sgS-m3-EZl" id="hyP-MB-NKi"/>
             </connections>
         </tableViewCell>
     </objects>

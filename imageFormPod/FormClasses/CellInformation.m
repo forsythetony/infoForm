@@ -17,6 +17,7 @@
     info.type = cellTypeDate;
     info.fieldTitle = title;
     info.fieldValue = date;
+    [info setExpanded:NO];
 
     return info;
 }
@@ -27,7 +28,21 @@
     info.type = cellTypeBasicText;
     info.fieldTitle = title;
     info.placeHolderValue = placeholder;
-
+    info.cellHeight = BasicCellHeight;
     return info;
+}
+-(void)setExpanded:(BOOL)expanded
+{
+    if (_type == cellTypeDate) {
+        _expanded = expanded;
+        
+        if (_expanded) {
+            _cellHeight = DateCellHeightEditing;
+        }
+        else
+        {
+            _cellHeight = DateCellHeight;
+        }
+    }
 }
 @end

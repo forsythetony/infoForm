@@ -9,6 +9,8 @@
 #import "InformationForm.h"
 
 @interface InformationForm () {
+    NSMutableArray *expandedPaths;
+    NSIndexPath *expandedPath;
     
 }
 
@@ -29,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+
 }
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -60,36 +64,18 @@
 #pragma mark - Table view data source
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
+
     if (_currentCells && [_currentCells count] > 0) {
         
-        CellInformation *cellInfo = _currentCells[indexPath.row];
+        CGFloat height = [_currentCells[indexPath.row] cellHeight];
         
-        switch (cellInfo.type) {
-            
-            case cellTypeBasicText:
-                
-                return BasicCellHeight;
-                
-                break;
-                
-            case cellTypeDate:
-                
-                return DateCellHeight;
-                
-                break;
-                
-            default:
-                return DefaultHeight;
-                break;
-        }
-        
+        return height;
     }
     else
     {
         return 0.0;
     }
+    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -160,5 +146,21 @@
             break;
     }
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CellInformation *info = _currentCells[indexPath.row];
+    
+    switch (info.type) {
+        case cellTypeDate: {
+                       
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 @end

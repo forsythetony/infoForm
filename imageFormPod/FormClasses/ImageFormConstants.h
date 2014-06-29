@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 
-#define DateCellHeight      216.0
+#define DateCellHeight          35.0
+#define DateCellHeightEditing   70.0
+
 #define BasicCellHeight     100.0
 #define DefaultHeight       40.0
 

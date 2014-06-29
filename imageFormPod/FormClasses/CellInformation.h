@@ -12,6 +12,8 @@
 @interface CellInformation : NSObject
 
 @property (assign, nonatomic) cellType type;
+@property (assign, nonatomic) CGFloat   cellHeight;
+@property (assign, nonatomic) BOOL  expanded;
 
 @property (strong, nonatomic) NSString* fieldTitle;
 @property (strong, nonatomic) id    fieldValue;

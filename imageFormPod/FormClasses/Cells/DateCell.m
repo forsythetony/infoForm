@@ -15,22 +15,30 @@
     [self initialSetup];
     
 }
--(void)configureDatePicker
+-(void)configureValueLabel
 {
-    _fieldDatePicker.datePickerMode = UIDatePickerModeDate;
-    _fieldDatePicker.maximumDate = [ImageFormConstants maximumDate];
-    _fieldDatePicker.minimumDate = [ImageFormConstants minimumDate];
+    _fieldValueLabel.font = [Styler dateCellTitleFont];
+    
+    _fieldValueLabel.textColor          =   [Styler dateCellValueTextColor];
+    _fieldValueLabel.backgroundColor    =   [Styler dateCellValueBackgroundColor];
+    
+    _fieldValueLabel.textAlignment = NSTextAlignmentLeft;
     
     
 }
 -(void)configureTitleLabel
 {
-    _fieldTitleLabel.textAlignment = NSTextAlignmentRight;
-    _fieldTitleLabel.font = [UIFont fontWithName:@"DinAlternate-Bold" size:30.0];
+    _fieldTitleLabel.font = [Styler dateCellTitleFont];
+    
+    _fieldTitleLabel.textColor          = [Styler dateCellTitleTextColor];
+    _fieldTitleLabel.backgroundColor    = [Styler dateCellTitleBackgroundColor];
+    
+    _fieldTitleLabel.textAlignment = NSTextAlignmentLeft;
+    
 }
 -(void)initialSetup
 {
-    [self configureDatePicker];
+    [self configureValueLabel];
     [self configureTitleLabel];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -42,7 +50,23 @@
 -(void)setInformation:(CellInformation *)information
 {
     _fieldTitleLabel.text = information.fieldTitle;
-    _fieldDatePicker.date = (NSDate*)information.fieldValue;
+    _fieldValueLabel.text = [(NSDate*)information.fieldValue displayDateOfType:sDateTypeSimple];
+}
+-(void)becomeEditable
+{
+    if (!_expanded) {
+        CGRect oldFrame = self.frame;
+        CGRect newFrame = oldFrame;
+        newFrame.size.height = _information.cellHeight;
+        
+        [UIView animateWithDuration:0.25 animations:^{
+            self.frame = newFrame;
+            
+        }];
+        
+        _expanded = YES;
+    }
+    
 }
 
 @end
