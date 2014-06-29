@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "FormClasses ", "imageFormPod/FormClasses/**/*.{h,m,xib}"
 
-  s.resources = ["**.xib"]
+  s.resources = ["/Cells/DateCell.xib"]
   s.requires_arc = true
 
   s.dependency 'Colours'
