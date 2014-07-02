@@ -125,6 +125,7 @@
 }
 -(void)dateChanged:(id) sender
 {
+    _information.informationHasChanged = YES;
     _information.fieldValue = _datePicker.date;
     
     _fieldValueLabel.text = [_datePicker.date displayDateOfType:sDateTypPretty];

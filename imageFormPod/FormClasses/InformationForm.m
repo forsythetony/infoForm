@@ -252,7 +252,7 @@
 
 -(void)buttonPressSaveInformation:(id) sender
 {
-    NSLog(@"Button testing!");
+    
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section

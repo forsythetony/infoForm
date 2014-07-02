@@ -17,6 +17,7 @@
 @property (assign, nonatomic) BOOL  expanded;
 
 @property (strong, nonatomic) NSString* JSONKey;
+@property (assign, nonatomic) BOOL informationHasChanged;
 
 @property (strong, nonatomic) NSString* fieldTitle;
 @property (strong, nonatomic) id    fieldValue;

@@ -19,6 +19,7 @@
     info.fieldValue = date;
     info.JSONKey = JSONKey;
     [info setExpanded:NO];
+    info.informationHasChanged = NO;
 
     return info;
 }
@@ -32,6 +33,7 @@
     info.fieldValue = value;
     info.cellHeight = BasicCellHeight;
     info.JSONKey = JSONKey;
+    info.informationHasChanged = NO;
     
     return info;
 }
