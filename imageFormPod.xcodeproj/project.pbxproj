@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A1F3E64E355427AB6FF2FD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B6F08C2A94696B7492B4C /* libPods.a */; };
+		BA36314819644D5900D6C85B /* NSString+stringHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = BA36314719644D5900D6C85B /* NSString+stringHandlers.m */; };
 		BAFC7FEA195F6F6F00E7B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */; };
 		BAFC7FEC195F6F6F00E7B494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */; };
 		BAFC7FEE195F6F6F00E7B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FED195F6F6F00E7B494 /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		307B6F08C2A94696B7492B4C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		392E336511A44D74A5E0A12E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BA36314619644D5900D6C85B /* NSString+stringHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+stringHandlers.h"; path = "FormClasses/Utilities/NSString+stringHandlers.h"; sourceTree = "<group>"; };
+		BA36314719644D5900D6C85B /* NSString+stringHandlers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+stringHandlers.m"; path = "FormClasses/Utilities/NSString+stringHandlers.m"; sourceTree = "<group>"; };
 		BAFC7FE6195F6F6F00E7B494 /* imageFormPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFormPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -228,6 +231,8 @@
 				BAFC804B195F90AC00E7B494 /* Styler.m */,
 				BAFC8042195F898900E7B494 /* NSDate+timelineStuff.h */,
 				BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */,
+				BA36314619644D5900D6C85B /* NSString+stringHandlers.h */,
+				BA36314719644D5900D6C85B /* NSString+stringHandlers.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA36314819644D5900D6C85B /* NSString+stringHandlers.m in Sources */,
 				BAFC8056195F97D700E7B494 /* BasicCell.m in Sources */,
 				BAFC803D195F7BCB00E7B494 /* CellInformation.m in Sources */,
 				BAFC8028195F761100E7B494 /* ImageFormConstants.m in Sources */,

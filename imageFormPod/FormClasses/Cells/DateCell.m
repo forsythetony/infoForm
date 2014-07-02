@@ -7,6 +7,7 @@
 //
 
 #import "DateCell.h"
+#import "NSString+stringHandlers.h"
 
 @implementation DateCell
 
@@ -88,7 +89,7 @@
 -(void)setInformation:(CellInformation *)information
 {
     _information = information;
-    _fieldTitleLabel.text = _information.fieldTitle;
+    _fieldTitleLabel.text = [_information.fieldTitle addColonForTitle];
     
     _fieldValueLabel.text = [(NSDate*)_information.fieldValue displayDateOfType:sDateTypPretty];
 

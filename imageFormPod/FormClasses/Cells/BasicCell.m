@@ -7,6 +7,7 @@
 //
 
 #import "BasicCell.h"
+#import "NSString+stringHandlers.h"
 
 @implementation BasicCell
 
@@ -50,7 +51,7 @@
 }
 -(void)setInformation:(CellInformation *)information
 {
-    _fieldTitleLabel.text = information.fieldTitle;
+    _fieldTitleLabel.text = [information.fieldTitle addColonForTitle];
     
     _fieldValueTextField.placeholder = (NSString*)information.placeHolderValue;
     _fieldValueTextField.text = (NSString*)information.fieldValue;
