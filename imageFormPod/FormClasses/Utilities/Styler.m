@@ -9,7 +9,7 @@
 #import "Styler.h"
 #import <Colours.h>
 
-#define TESTING YES
+#define TESTING NO
 
 @implementation Styler
 
