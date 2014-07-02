@@ -12,6 +12,7 @@
 #import "Cells/DateCell.h"
 #import "BasicCell.h"
 #import "Styler.h"
+#import "NSString+stringHandlers.h"
 
 @interface InformationForm : UITableViewController {
     

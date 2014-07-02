@@ -7,8 +7,11 @@
 //
 
 #import "BasicCell.h"
+#import "NSString+stringHandlers.h"
 
-@implementation BasicCell
+@implementation BasicCell {
+    NSString *oldTextFieldValue;
+}
 
 - (void)awakeFromNib
 {
@@ -21,15 +24,25 @@
 }
 -(void)configureTitleLabel
 {
-    _fieldTitleLabel.backgroundColor = [UIColor clearColor];
+    _fieldTitleLabel.backgroundColor    = [Styler basicCellTitleBackgroundColor];
+    _fieldTitleLabel.textColor          = [Styler basicCellTitleTextColor];
+    
     _fieldTitleLabel.font = [Styler basicCellTitleFont];
+    
     _fieldTitleLabel.textAlignment = NSTextAlignmentRight;
     
 }
 -(void)configureTextfield
 {
-    _fieldValueTextField.borderStyle = UITextBorderStyleNone;
+    _fieldValueTextField.backgroundColor    = [Styler basicCellValueBackgroundColor];
+    _fieldValueTextField.textColor          = [Styler basicCellValueTextColor];
+
     _fieldValueTextField.font = [Styler basicCellTextValueFont];
+    
+    _fieldValueTextField.borderStyle = UITextBorderStyleNone;
+    
+    _fieldValueTextField.delegate = self;
+
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -42,9 +55,25 @@
 }
 -(void)setInformation:(CellInformation *)information
 {
-    _fieldTitleLabel.text = information.fieldTitle;
+    _fieldTitleLabel.text = [information.fieldTitle addColonForTitle];
     
     _fieldValueTextField.placeholder = (NSString*)information.placeHolderValue;
     _fieldValueTextField.text = (NSString*)information.fieldValue;
 }
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+
+    CellInformation *info = _information;
+    info.fieldValue = textField.text;
+    
+}
+
 @end

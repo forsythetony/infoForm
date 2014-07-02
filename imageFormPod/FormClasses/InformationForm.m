@@ -9,6 +9,7 @@
 #import "InformationForm.h"
 
 @interface InformationForm () {
+    
     NSMutableArray *expandedPaths;
     NSIndexPath *expandedPath;
     
@@ -36,9 +37,9 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-        [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Starting Date" andDate:[NSDate date]]];
-        [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Basic Title" andPlaceholderValue:@"None"]];
+        [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Starting Date" andDate:[NSDate date] andJSONKeyValue:@"DateKey"]];
     
+        [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Name" andValue:@"Running Around" andPlaceholderValue:@"Name" andJSONKeyValue:@"NameKey"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -179,6 +180,9 @@
             [tableView beginUpdates];
             [tableView endUpdates];
             
+            DateCell *cell = (DateCell*)[tableView cellForRowAtIndexPath:indexPath];
+            [cell showDatePicker];
+            
         }
             break;
             
@@ -195,8 +199,6 @@
     pickerView.date = (NSDate*)info.fieldValue;
     
     [self.tableView addSubview:pickerView];
-    
-
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "DateCell.h"
+#import "NSString+stringHandlers.h"
 
 @implementation DateCell
 
@@ -35,7 +36,7 @@
     _fieldTitleLabel.textColor          = [Styler dateCellTitleTextColor];
     _fieldTitleLabel.backgroundColor    = [Styler dateCellTitleBackgroundColor];
     
-    _fieldTitleLabel.textAlignment = NSTextAlignmentLeft;
+    _fieldTitleLabel.textAlignment = NSTextAlignmentRight;
     
 }
 -(void)initialSetup
@@ -47,6 +48,7 @@
 {
     [super setSelected:selected animated:animated];
     
+    /*
     if (!_expanded) {
         [self addDatePicker];
     }
@@ -54,14 +56,25 @@
     {
         [self removeDatePicker];
     }
+     */
     
     
 }
-
+-(void)showDatePicker
+{
+    if (!_expanded) {
+        [self addDatePicker];
+    }
+    else
+    {
+        [self removeDatePicker];
+    }
+}
 -(void)removeDatePicker
 {
     [_datePicker removeFromSuperview];
     _datePicker = nil;
+    _expanded = NO;
 }
 -(void)addDatePicker
 {
@@ -71,8 +84,10 @@
     
     _datePicker.alpha = 0.0;
     
+    
     _datePicker.date = (NSDate*)_information.fieldValue;
-    _datePicker.datePickerMode = UIDatePickerModeDate;
+    _datePicker.datePickerMode = [Styler dateCellDatePickerMode];
+    
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     
     _expanded = YES;
@@ -86,8 +101,10 @@
 -(void)setInformation:(CellInformation *)information
 {
     _information = information;
-    _fieldTitleLabel.text = _information.fieldTitle;
+    _fieldTitleLabel.text = [_information.fieldTitle addColonForTitle];
+    
     _fieldValueLabel.text = [(NSDate*)_information.fieldValue displayDateOfType:sDateTypPretty];
+
     _expanded = NO;
 }
 -(void)becomeEditable

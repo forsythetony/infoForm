@@ -10,7 +10,7 @@
 #import "CellInformation.h"
 #import "Styler.h"
 
-@interface BasicCell : UITableViewCell
+@interface BasicCell : UITableViewCell <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *fieldTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *fieldValueTextField;

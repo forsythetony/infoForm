@@ -10,25 +10,29 @@
 
 @implementation CellInformation
 
-+(CellInformation *)createDateCellWithTitle:(NSString *)title andDate:(NSDate *)date
++(CellInformation *)createDateCellWithTitle:(NSString *)title andDate:(NSDate *)date andJSONKeyValue:(NSString *)JSONKey
 {
     CellInformation* info = [[self class] new];
     
     info.type = cellTypeDate;
     info.fieldTitle = title;
     info.fieldValue = date;
+    info.JSONKey = JSONKey;
     [info setExpanded:NO];
 
     return info;
 }
-+(CellInformation *)createBasicCellWithTitle:(NSString *)title andPlaceholderValue:(NSString *)placeholder
++(CellInformation *)createBasicCellWithTitle:(NSString *)title andValue:(NSString *)value andPlaceholderValue:(NSString *)placeholder andJSONKeyValue:(NSString *)JSONKey
 {
     CellInformation *info = [[self class] new];
     
     info.type = cellTypeBasicText;
     info.fieldTitle = title;
     info.placeHolderValue = placeholder;
+    info.fieldValue = value;
     info.cellHeight = BasicCellHeight;
+    info.JSONKey = JSONKey;
+    
     return info;
 }
 -(void)setExpanded:(BOOL)expanded
@@ -43,6 +47,40 @@
         {
             _cellHeight = DateCellHeight;
         }
+    }
+}
+
+-(NSString *)getJSONKey
+{
+    if (_JSONKey) {
+        return _JSONKey;
+    }
+    else
+    {
+        return nil;
+    }
+}
+-(NSString *)getJSONValue
+{
+    if (!_fieldValue) {
+        return nil;
+    }
+    
+    switch (_type) {
+        case cellTypeDate: {
+            return [(NSDate*)_fieldValue displayDateOfType:sDateTypeSimple];
+        }
+            break;
+        
+        case cellTypeBasicText: {
+            return (NSString*)_fieldValue;
+        }
+            break;
+            
+        default: {
+            return nil;
+        }
+            break;
     }
 }
 @end

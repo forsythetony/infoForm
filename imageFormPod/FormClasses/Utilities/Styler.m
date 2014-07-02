@@ -9,20 +9,11 @@
 #import "Styler.h"
 #import <Colours.h>
 
+#define TESTING NO
+
 @implementation Styler
 
-+(UIFont *)basicCellTextValueFont{
-    CGFloat fontSize = 20.0;
-    
-    return [UIFont fontWithName:globalFont size:fontSize];
-    
-}
-+(UIFont *)basicCellTitleFont
-{
-    CGFloat fontSize = 20.0;
-    
-    return [UIFont fontWithName:globalFont size:fontSize];
-}
+
 /*
     Date Cell Style Attributes
 */
@@ -38,7 +29,13 @@
 //  Colors
 +(UIColor *)dateCellTitleBackgroundColor
 {
-    return [UIColor clearColor];
+    if (TESTING) {
+        return [UIColor yellowColor];
+    }
+    else
+    {
+        return [UIColor clearColor];
+    }
 }
 +(UIColor *)dateCellTitleTextColor
 {
@@ -49,6 +46,53 @@
     return [UIColor clearColor];
 }
 +(UIColor *)dateCellValueTextColor
+{
+    return [UIColor black25PercentColor];
+}
+
++(UIDatePickerMode)dateCellDatePickerMode
+{
+    return UIDatePickerModeDate;
+}
+/*
+    Basic Cell Style Attributes
+*/
+
+//  Fonts
++(UIFont *)basicCellTitleFont
+{
+    CGFloat fontSize = 15.0;
+    
+    return [UIFont fontWithName:globalFont size:fontSize];
+}
++(UIFont *)basicCellTextValueFont{
+    CGFloat fontSize = 15.0;
+    
+    return [UIFont fontWithName:globalFont size:fontSize];
+    
+}
+
+//  Colors
++(UIColor *)basicCellTitleBackgroundColor
+{
+    if (TESTING) {
+        return [UIColor orangeColor];
+    }
+    else
+    {
+        return [UIColor clearColor];
+    }
+}
++(UIColor *)basicCellTitleTextColor
+{
+    return [UIColor black25PercentColor];
+}
+
++(UIColor *)basicCellValueBackgroundColor
+{
+    return [UIColor clearColor];
+}
++(UIColor *)basicCellValueTextColor
 {
     return [UIColor black25PercentColor];
 }
