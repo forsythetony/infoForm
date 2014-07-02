@@ -252,9 +252,18 @@
 
 -(void)buttonPressSaveInformation:(id) sender
 {
+    NSMutableArray *infoArr = [NSMutableArray new];
+    
     for (NSInteger i = 1 ; i <= [_currentCells count]; i++) {
         
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        
+        CellInformation* info = [cell performSelector:@selector(information) withObject:nil];
+        
+        [infoArr addObject:@{[info getJSONKey]: [info getJSONValue]}];
     }
+    
+    
     
     
 }
