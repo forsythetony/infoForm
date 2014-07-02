@@ -252,6 +252,9 @@
 
 -(void)buttonPressSaveInformation:(id) sender
 {
+    for (NSInteger i = 1 ; i <= [_currentCells count]; i++) {
+        
+    }
     
     
 }
