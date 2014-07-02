@@ -14,6 +14,12 @@
 #import "Styler.h"
 #import "NSString+stringHandlers.h"
 
+@protocol InformationFormDelegate <NSObject>
+
+-(void)finishedGatheringCellInformation:(NSArray*) cellInfo;
+
+@end
+
 @interface InformationForm : UITableViewController {
     
     NSMutableDictionary *selectedIndexes;
@@ -22,6 +28,8 @@
 
 @property (strong, nonatomic) NSArray* currentCells;
 @property (strong, nonatomic) Styler* myStyler;
+
+@property (weak, nonatomic) id <InformationFormDelegate> delegate;
 
 -(void)addCellWithInformation:(CellInformation*) information;
 @end
