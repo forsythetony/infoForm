@@ -97,4 +97,32 @@
     return [UIColor black25PercentColor];
 }
 
+/*
+    Footer Button
+*/
+
++(UIFont *)footerButtonTitleFont
+{
+    CGFloat fontSize = 15.0;
+    
+    return [UIFont fontWithName:globalFont size:fontSize];
+}
+
+//  Colours
+
++(UIColor *)footerButtonBackgroundColor
+{
+    return [UIColor successColor];
+}
++(UIColor *)footerButtonTextColor
+{
+    return [UIColor whiteColor];
+}
+
+//  Other
+
++(NSTextAlignment)footerButtonTextAlignment
+{
+    return NSTextAlignmentCenter;
+}
 @end

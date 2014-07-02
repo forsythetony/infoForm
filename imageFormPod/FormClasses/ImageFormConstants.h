@@ -18,6 +18,8 @@
 
 #define DateCellFrame       CGRectMake(0.0, 0.0, self.tableView.frame.size.width, DateCellHeight)
 
+#define FooterHeight        50.0
+
 typedef NS_ENUM(NSInteger, cellType) {
     cellTypeBasicText,
     cellTypeDate

@@ -44,4 +44,18 @@
 +(UIColor*)basicCellValueBackgroundColor;
 +(UIColor*)basicCellValueTextColor;
 
+/*
+    Table Footer Button Style Attributes
+*/
+
+//  Fonts
++(UIFont*)footerButtonTitleFont;
+
+//  Colors
++(UIColor*)footerButtonBackgroundColor;
++(UIColor*)footerButtonTextColor;
+
+//  Text Alignment
++(NSTextAlignment)footerButtonTextAlignment;
+
 @end

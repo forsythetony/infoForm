@@ -200,6 +200,62 @@
     
     [self.tableView addSubview:pickerView];
 }
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0: {
+            
+            //  Create Footer View
+            
+            CGRect footerViewFrame = CGRectMake(0.0, 0.0, self.tableView.frame.size.width, FooterHeight);
+            
+            UIView *footerView = [[UIView alloc] initWithFrame:footerViewFrame];
+            
+            //  Create Button View
+            
+            CGRect footerButtonFrame = footerViewFrame;
+            
+            UIButton *footerButton = [[UIButton alloc] initWithFrame:footerButtonFrame];
+            
+            [footerButton setTitle:@"Save" forState:UIControlStateNormal];
+            
+            [footerButton addTarget:self action:@selector(buttonPressSaveInformation:) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+            //  Add as subview to footerview
+            
+            [footerView addSubview:footerButton];
+            
+            
+            
+            return footerView;
+            
+            
+        }
+            break;
+            
+        default: {
+            return nil;
+        }
+            break;
+    }
+}
 
-
+-(void)buttonPressSaveInformation:(id) sender
+{
+    NSLog(@"Button testing!");
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return FooterHeight;
+            break;
+            
+        default:
+            return 0.0;
+            break;
+    }
+}
 @end
