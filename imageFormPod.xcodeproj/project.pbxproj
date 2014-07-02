@@ -122,13 +122,6 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		BA36314A19646F4D00D6C85B /* Footer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Footer;
-			sourceTree = "<group>";
-		};
 		BAFC7FDD195F6F6F00E7B494 = {
 			isa = PBXGroup;
 			children = (
@@ -213,7 +206,6 @@
 				BAFC8027195F761100E7B494 /* ImageFormConstants.m */,
 				BAFC801F195F731C00E7B494 /* InformationForm.h */,
 				BAFC8020195F731C00E7B494 /* InformationForm.m */,
-				BA36314A19646F4D00D6C85B /* Footer */,
 				BAFC8029195F767200E7B494 /* Cell Types */,
 				BAFC8022195F759100E7B494 /* Information Types */,
 				BAFC803E195F888200E7B494 /* Utilities */,
