@@ -180,6 +180,9 @@
             [tableView beginUpdates];
             [tableView endUpdates];
             
+            DateCell *cell = (DateCell*)[tableView cellForRowAtIndexPath:indexPath];
+            [cell showDatePicker];
+            
         }
             break;
             

@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *fieldValueLabel;
 
 
+-(void)showDatePicker;
 -(void)becomeEditable;
 
 @end

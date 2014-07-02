@@ -60,11 +60,21 @@
     
     
 }
-
+-(void)showDatePicker
+{
+    if (!_expanded) {
+        [self addDatePicker];
+    }
+    else
+    {
+        [self removeDatePicker];
+    }
+}
 -(void)removeDatePicker
 {
     [_datePicker removeFromSuperview];
     _datePicker = nil;
+    _expanded = NO;
 }
 -(void)addDatePicker
 {
@@ -74,9 +84,9 @@
     
     _datePicker.alpha = 0.0;
     
+    
     _datePicker.date = (NSDate*)_information.fieldValue;
     _datePicker.datePickerMode = [Styler dateCellDatePickerMode];
-    
     
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     
