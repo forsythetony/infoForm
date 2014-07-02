@@ -11,18 +11,7 @@
 
 @implementation Styler
 
-+(UIFont *)basicCellTextValueFont{
-    CGFloat fontSize = 20.0;
-    
-    return [UIFont fontWithName:globalFont size:fontSize];
-    
-}
-+(UIFont *)basicCellTitleFont
-{
-    CGFloat fontSize = 20.0;
-    
-    return [UIFont fontWithName:globalFont size:fontSize];
-}
+
 /*
     Date Cell Style Attributes
 */
@@ -49,6 +38,43 @@
     return [UIColor clearColor];
 }
 +(UIColor *)dateCellValueTextColor
+{
+    return [UIColor black25PercentColor];
+}
+
+/*
+    Basic Cell Style Attributes
+*/
+
+//  Fonts
++(UIFont *)basicCellTitleFont
+{
+    CGFloat fontSize = 15.0;
+    
+    return [UIFont fontWithName:globalFont size:fontSize];
+}
++(UIFont *)basicCellTextValueFont{
+    CGFloat fontSize = 15.0;
+    
+    return [UIFont fontWithName:globalFont size:fontSize];
+    
+}
+
+//  Colors
++(UIColor *)basicCellTitleBackgroundColor
+{
+    return [UIColor clearColor];
+}
++(UIColor *)basicCellTitleTextColor
+{
+    return [UIColor black25PercentColor];
+}
+
++(UIColor *)basicCellValueBackgroundColor
+{
+    return [UIColor clearColor];
+}
++(UIColor *)basicCellValueTextColor
 {
     return [UIColor black25PercentColor];
 }

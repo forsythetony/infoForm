@@ -12,10 +12,6 @@
 
 @interface Styler : NSObject
 
-
-+(UIFont*)basicCellTitleFont;
-+(UIFont*)basicCellTextValueFont;
-
 /*
     Date Cell Style Attributes
 */
@@ -29,5 +25,21 @@
 
 +(UIColor*)dateCellValueBackgroundColor;
 +(UIColor*)dateCellValueTextColor;
+
+
+/*
+    Basic Cell Style Attributes
+*/
+
+//  Fonts
++(UIFont*)basicCellTitleFont;
++(UIFont*)basicCellTextValueFont;
+
+//  Colors
++(UIColor*)basicCellTitleBackgroundColor;
++(UIColor*)basicCellTitleTextColor;
+
++(UIColor*)basicCellValueBackgroundColor;
++(UIColor*)basicCellValueTextColor;
 
 @end
