@@ -57,5 +57,5 @@
 
 //  Text Alignment
 +(NSTextAlignment)footerButtonTextAlignment;
-
++(CGFloat)footerButtonCornerRadius;
 @end

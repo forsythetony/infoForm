@@ -125,4 +125,8 @@
 {
     return NSTextAlignmentCenter;
 }
++(CGFloat)footerButtonCornerRadius
+{
+    return 8.0;
+}
 @end
