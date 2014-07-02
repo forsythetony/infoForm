@@ -38,7 +38,9 @@
 -(void)viewDidAppear:(BOOL)animated
 {
         [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Starting Date" andDate:[NSDate date]]];
-        [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Basic Title" andPlaceholderValue:@"Nothing Really"]];
+    
+        [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Name" andValue:@"Running Around" andPlaceholderValue:@"Name"]];
+    
     
 }
 

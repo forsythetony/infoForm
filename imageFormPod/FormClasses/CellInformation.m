@@ -23,13 +23,6 @@
 }
 +(CellInformation *)createBasicCellWithTitle:(NSString *)title andValue:(NSString *)value andPlaceholderValue:(NSString *)placeholder
 {
-    
-    
-    
-    
-    
-    
-    
     CellInformation *info = [[self class] new];
     
     info.type = cellTypeBasicText;
