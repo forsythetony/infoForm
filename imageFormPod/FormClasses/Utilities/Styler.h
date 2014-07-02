@@ -26,6 +26,8 @@
 +(UIColor*)dateCellValueBackgroundColor;
 +(UIColor*)dateCellValueTextColor;
 
+//  Other
++(UIDatePickerMode)dateCellDatePickerMode;
 
 /*
     Basic Cell Style Attributes

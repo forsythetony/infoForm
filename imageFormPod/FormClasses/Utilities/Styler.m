@@ -50,6 +50,10 @@
     return [UIColor black25PercentColor];
 }
 
++(UIDatePickerMode)dateCellDatePickerMode
+{
+    return UIDatePickerModeDate;
+}
 /*
     Basic Cell Style Attributes
 */

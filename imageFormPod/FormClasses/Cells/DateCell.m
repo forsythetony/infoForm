@@ -75,7 +75,9 @@
     _datePicker.alpha = 0.0;
     
     _datePicker.date = (NSDate*)_information.fieldValue;
-    _datePicker.datePickerMode = UIDatePickerModeDate;
+    _datePicker.datePickerMode = [Styler dateCellDatePickerMode];
+    
+    
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     
     _expanded = YES;
