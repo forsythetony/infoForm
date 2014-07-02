@@ -38,6 +38,8 @@
     _fieldValueTextField.font = [Styler basicCellTextValueFont];
     
     _fieldValueTextField.borderStyle = UITextBorderStyleNone;
+    
+    _fieldValueTextField.delegate = self;
 
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -55,6 +57,11 @@
     
     _fieldValueTextField.placeholder = (NSString*)information.placeHolderValue;
     _fieldValueTextField.text = (NSString*)information.fieldValue;
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 @end
