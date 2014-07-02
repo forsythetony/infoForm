@@ -219,6 +219,15 @@
             
             [footerButton setTitle:@"Save" forState:UIControlStateNormal];
             
+            footerButton.titleLabel.textAlignment = [Styler footerButtonTextAlignment];
+            footerButton.titleLabel.font = [Styler footerButtonTitleFont];
+            footerButton.titleLabel.textColor = [Styler footerButtonTextColor];
+            footerButton.backgroundColor = [Styler footerButtonBackgroundColor];
+            
+            
+            
+            
+            
             [footerButton addTarget:self action:@selector(buttonPressSaveInformation:) forControlEvents:UIControlEventTouchUpInside];
             
             
