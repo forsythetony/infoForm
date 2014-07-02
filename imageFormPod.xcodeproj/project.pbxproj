@@ -111,6 +111,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA3631491964584200D6C85B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC8042195F898900E7B494 /* NSDate+timelineStuff.h */,
+				BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */,
+				BA36314619644D5900D6C85B /* NSString+stringHandlers.h */,
+				BA36314719644D5900D6C85B /* NSString+stringHandlers.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		BAFC7FDD195F6F6F00E7B494 = {
 			isa = PBXGroup;
 			children = (
@@ -229,10 +240,7 @@
 			children = (
 				BAFC804A195F90AC00E7B494 /* Styler.h */,
 				BAFC804B195F90AC00E7B494 /* Styler.m */,
-				BAFC8042195F898900E7B494 /* NSDate+timelineStuff.h */,
-				BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */,
-				BA36314619644D5900D6C85B /* NSString+stringHandlers.h */,
-				BA36314719644D5900D6C85B /* NSString+stringHandlers.m */,
+				BA3631491964584200D6C85B /* Categories */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
