@@ -12,7 +12,7 @@
 #define DateCellHeight          35.0
 #define DateCellHeightEditing   70.0
 
-#define BasicCellHeight     40.0
+#define BasicCellHeight     35.0
 
 #define DefaultHeight       40.0
 
