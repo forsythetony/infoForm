@@ -9,6 +9,8 @@
 #import "Styler.h"
 #import <Colours.h>
 
+#define TESTING YES
+
 @implementation Styler
 
 
@@ -27,7 +29,13 @@
 //  Colors
 +(UIColor *)dateCellTitleBackgroundColor
 {
-    return [UIColor clearColor];
+    if (TESTING) {
+        return [UIColor yellowColor];
+    }
+    else
+    {
+        return [UIColor clearColor];
+    }
 }
 +(UIColor *)dateCellTitleTextColor
 {
@@ -63,7 +71,13 @@
 //  Colors
 +(UIColor *)basicCellTitleBackgroundColor
 {
-    return [UIColor clearColor];
+    if (TESTING) {
+        return [UIColor orangeColor];
+    }
+    else
+    {
+        return [UIColor clearColor];
+    }
 }
 +(UIColor *)basicCellTitleTextColor
 {

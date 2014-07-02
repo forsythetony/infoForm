@@ -13,21 +13,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="570" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="dateTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.58846382470000003" green="0.14277563909999999" blue="0.1155509473" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="150" id="nVz-WV-TUA"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-m3-EZl">
-                        <rect key="frame" x="160" y="0.0" width="410" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="dateValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-m3-EZl">
+                        <rect key="frame" x="185" y="0.0" width="380" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.019607843829999999" green="0.73333334920000004" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="380" id="C0d-iw-q6l"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                     <constraint firstItem="8Zz-tJ-7YO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7Nf-cq-DZb"/>
                     <constraint firstItem="sgS-m3-EZl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CnB-nk-jlW"/>
                     <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IhL-Zk-0rw"/>
-                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="10" id="MeK-lo-iLC"/>
+                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="30" id="MeK-lo-iLC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
