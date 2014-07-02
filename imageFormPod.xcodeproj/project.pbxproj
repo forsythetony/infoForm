@@ -211,9 +211,9 @@
 		BAFC8029195F767200E7B494 /* Cell Types */ = {
 			isa = PBXGroup;
 			children = (
-				BAFC8052195F97D700E7B494 /* BasicCell.xib */,
 				BAFC8053195F97D700E7B494 /* BasicCell.h */,
 				BAFC8054195F97D700E7B494 /* BasicCell.m */,
+				BAFC8052195F97D700E7B494 /* BasicCell.xib */,
 				BAFC802D195F777400E7B494 /* DateCell.h */,
 				BAFC802E195F777400E7B494 /* DateCell.m */,
 				BAFC802F195F777400E7B494 /* DateCell.xib */,

@@ -21,15 +21,23 @@
 }
 -(void)configureTitleLabel
 {
-    _fieldTitleLabel.backgroundColor = [UIColor clearColor];
+    _fieldTitleLabel.backgroundColor    = [Styler basicCellTitleBackgroundColor];
+    _fieldTitleLabel.textColor          = [Styler basicCellTitleTextColor];
+    
     _fieldTitleLabel.font = [Styler basicCellTitleFont];
+    
     _fieldTitleLabel.textAlignment = NSTextAlignmentRight;
     
 }
 -(void)configureTextfield
 {
-    _fieldValueTextField.borderStyle = UITextBorderStyleNone;
+    _fieldValueTextField.backgroundColor    = [Styler basicCellValueBackgroundColor];
+    _fieldValueTextField.textColor          = [Styler basicCellValueTextColor];
+
     _fieldValueTextField.font = [Styler basicCellTextValueFont];
+    
+    _fieldValueTextField.borderStyle = UITextBorderStyleNone;
+
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
