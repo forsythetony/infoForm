@@ -13,6 +13,8 @@
 - (void)awakeFromNib
 {
     [self initialSetup];
+    _expanded = NO;
+    [_datePicker removeFromSuperview];
     
 }
 -(void)configureValueLabel
@@ -44,13 +46,49 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+    
+    if (!_expanded) {
+        [self addDatePicker];
+    }
+    else
+    {
+        [self removeDatePicker];
+    }
+    
+    
+}
 
-    // Configure the view for the selected state
+-(void)removeDatePicker
+{
+    [_datePicker removeFromSuperview];
+    _datePicker = nil;
+}
+-(void)addDatePicker
+{
+    CGRect datePickerRect = CGRectMake(0.0, _fieldTitleLabel.frame.origin.y + _fieldTitleLabel.frame.size.height, self.frame.size.width, 200.0);
+    
+    _datePicker = [[UIDatePicker alloc] initWithFrame:datePickerRect];
+    
+    _datePicker.alpha = 0.0;
+    
+    _datePicker.date = (NSDate*)_information.fieldValue;
+    _datePicker.datePickerMode = UIDatePickerModeDate;
+    [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    _expanded = YES;
+    
+    [self addSubview:_datePicker];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        _datePicker.alpha = 1.0;
+    }];
 }
 -(void)setInformation:(CellInformation *)information
 {
-    _fieldTitleLabel.text = information.fieldTitle;
-    _fieldValueLabel.text = [(NSDate*)information.fieldValue displayDateOfType:sDateTypeSimple];
+    _information = information;
+    _fieldTitleLabel.text = _information.fieldTitle;
+    _fieldValueLabel.text = [(NSDate*)_information.fieldValue displayDateOfType:sDateTypPretty];
+    _expanded = NO;
 }
 -(void)becomeEditable
 {
@@ -68,5 +106,12 @@
     }
     
 }
+-(void)dateChanged:(id) sender
+{
+    _information.fieldValue = _datePicker.date;
+    
+    _fieldValueLabel.text = [_datePicker.date displayDateOfType:sDateTypPretty];
+}
+
 
 @end

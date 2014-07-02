@@ -6,26 +6,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="35" id="KGk-i7-Jjw" customClass="DateCell">
-            <rect key="frame" x="0.0" y="0.0" width="570" height="35"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="DateCell">
+            <rect key="frame" x="0.0" y="0.0" width="570" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="570" height="34"/>
+                <rect key="frame" x="0.0" y="0.0" width="570" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="dateTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
-                        <rect key="frame" x="0.0" y="0.0" width="148" height="35"/>
+                        <rect key="frame" x="0.0" y="0.0" width="148" height="49"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.58846382470000003" green="0.14277563909999999" blue="0.1155509473" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="148" id="nVz-WV-TUA"/>
+                            <constraint firstAttribute="width" constant="100" id="nVz-WV-TUA"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="dateValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-m3-EZl">
-                        <rect key="frame" x="166" y="0.0" width="404" height="35"/>
+                        <rect key="frame" x="158" y="0.0" width="412" height="49"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.019607843829999999" green="0.73333334920000004" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -35,12 +35,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="sgS-m3-EZl" secondAttribute="trailing" id="3ib-Y5-8ak"/>
-                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7Nf-cq-DZb"/>
+                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7Nf-cq-DZb"/>
                     <constraint firstItem="sgS-m3-EZl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CnB-nk-jlW"/>
-                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="15" id="MeK-lo-iLC"/>
-                    <constraint firstAttribute="bottom" secondItem="sgS-m3-EZl" secondAttribute="bottom" id="epb-Ta-aBY"/>
-                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iYK-ya-392"/>
-                    <constraint firstAttribute="bottom" secondItem="8Zz-tJ-7YO" secondAttribute="bottom" id="rcp-Rf-Qgq"/>
+                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IhL-Zk-0rw"/>
+                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="10" id="MeK-lo-iLC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

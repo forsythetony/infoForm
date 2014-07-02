@@ -11,15 +11,17 @@
 #import "Styler.h"
 #import "NSDate+timelineStuff.h"
 
-@interface DateCell : UITableViewCell
+@interface DateCell : UITableViewCell 
 
 
-@property (strong, nonatomic) CellInformation* information;
+@property (strong, nonatomic) CellInformation*  information;
+@property (strong, nonatomic) UIDatePicker*     datePicker;
 
 @property (assign, nonatomic) BOOL expanded;
 
 @property (weak, nonatomic) IBOutlet UILabel *fieldTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fieldValueLabel;
+
 
 -(void)becomeEditable;
 

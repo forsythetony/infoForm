@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    selectedIndexes = [[NSMutableDictionary alloc] init];
 
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -69,13 +69,26 @@
         
         CGFloat height = [_currentCells[indexPath.row] cellHeight];
         
-        return height;
+        if ([self cellIsSelected:indexPath]) {
+            
+            return 236.0;
+            
+        }
+        else
+        {
+            return height;
+        }
     }
     else
     {
         return 0.0;
     }
     
+}
+- (BOOL)cellIsSelected:(NSIndexPath *)indexPath {
+	// Return whether the cell at the specified index path is selected or not
+	NSNumber *selectedIndex = [selectedIndexes objectForKey:indexPath];
+	return selectedIndex == nil ? FALSE : [selectedIndex boolValue];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -152,7 +165,19 @@
     
     switch (info.type) {
         case cellTypeDate: {
-                       
+            
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+            
+            BOOL isSelected = ![self cellIsSelected:indexPath];
+            
+            // Store cell 'selected' state keyed on indexPath
+            NSNumber *selectedIndex = [NSNumber numberWithBool:isSelected];
+            [selectedIndexes setObject:selectedIndex forKey:indexPath];
+            
+            
+            // This is where magic happens...
+            [tableView beginUpdates];
+            [tableView endUpdates];
             
         }
             break;
@@ -160,6 +185,18 @@
         default:
             break;
     }
+}
+-(void)showDatePickerWithInformation:(CellInformation*) info
+{
+    CGRect datePickerView = CGRectMake(0.0, 0.0, self.tableView.frame.size.width, 100.0);
+    
+    UIDatePicker *pickerView = [[UIDatePicker alloc] initWithFrame:datePickerView];
+    
+    pickerView.date = (NSDate*)info.fieldValue;
+    
+    [self.tableView addSubview:pickerView];
+    
+
 }
 
 

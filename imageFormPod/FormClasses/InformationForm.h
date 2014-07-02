@@ -13,7 +13,11 @@
 #import "BasicCell.h"
 #import "Styler.h"
 
-@interface InformationForm : UITableViewController
+@interface InformationForm : UITableViewController {
+    
+    NSMutableDictionary *selectedIndexes;
+    
+}
 
 @property (strong, nonatomic) NSArray* currentCells;
 @property (strong, nonatomic) Styler* myStyler;
