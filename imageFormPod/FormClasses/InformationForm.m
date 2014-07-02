@@ -223,7 +223,7 @@
             footerButton.titleLabel.font = [Styler footerButtonTitleFont];
             footerButton.titleLabel.textColor = [Styler footerButtonTextColor];
             footerButton.backgroundColor = [Styler footerButtonBackgroundColor];
-            
+            footerButton.layer.cornerRadius = [Styler footerButtonCornerRadius];
             
             
             
