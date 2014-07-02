@@ -89,7 +89,9 @@
 {
     _information = information;
     _fieldTitleLabel.text = _information.fieldTitle;
+    
     _fieldValueLabel.text = [(NSDate*)_information.fieldValue displayDateOfType:sDateTypPretty];
+
     _expanded = NO;
 }
 -(void)becomeEditable

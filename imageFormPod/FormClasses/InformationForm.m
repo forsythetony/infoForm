@@ -40,8 +40,6 @@
         [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Starting Date" andDate:[NSDate date]]];
     
         [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Name" andValue:@"Running Around" andPlaceholderValue:@"Name"]];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
