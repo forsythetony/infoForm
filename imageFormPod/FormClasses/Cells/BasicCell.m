@@ -56,4 +56,5 @@
     _fieldValueTextField.placeholder = (NSString*)information.placeHolderValue;
     _fieldValueTextField.text = (NSString*)information.fieldValue;
 }
+
 @end

@@ -12,7 +12,7 @@
 
 -(NSString *)addColonForTitle
 {
-    if (![self isEqualToString:@""]) {
+    if ([self isEqualToString:@""]) {
         return self;
     }
     else
