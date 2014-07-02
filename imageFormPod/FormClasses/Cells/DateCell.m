@@ -50,7 +50,7 @@
     /*
     if (!_expanded) {
         [self addDatePicker];
-     test
+     test2
     }
     else
     {
