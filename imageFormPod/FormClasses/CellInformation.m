@@ -10,18 +10,19 @@
 
 @implementation CellInformation
 
-+(CellInformation *)createDateCellWithTitle:(NSString *)title andDate:(NSDate *)date
++(CellInformation *)createDateCellWithTitle:(NSString *)title andDate:(NSDate *)date andJSONKeyValue:(NSString *)JSONKey
 {
     CellInformation* info = [[self class] new];
     
     info.type = cellTypeDate;
     info.fieldTitle = title;
     info.fieldValue = date;
+    info.JSONKey = JSONKey;
     [info setExpanded:NO];
 
     return info;
 }
-+(CellInformation *)createBasicCellWithTitle:(NSString *)title andValue:(NSString *)value andPlaceholderValue:(NSString *)placeholder
++(CellInformation *)createBasicCellWithTitle:(NSString *)title andValue:(NSString *)value andPlaceholderValue:(NSString *)placeholder andJSONKeyValue:(NSString *)JSONKey
 {
     CellInformation *info = [[self class] new];
     
@@ -30,6 +31,8 @@
     info.placeHolderValue = placeholder;
     info.fieldValue = value;
     info.cellHeight = BasicCellHeight;
+    info.JSONKey = JSONKey;
+    
     return info;
 }
 -(void)setExpanded:(BOOL)expanded
