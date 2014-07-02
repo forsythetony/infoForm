@@ -9,6 +9,7 @@
 #import "InformationForm.h"
 
 @interface InformationForm () {
+    
     NSMutableArray *expandedPaths;
     NSIndexPath *expandedPath;
     
@@ -195,8 +196,6 @@
     pickerView.date = (NSDate*)info.fieldValue;
     
     [self.tableView addSubview:pickerView];
-    
-
 }
 
 

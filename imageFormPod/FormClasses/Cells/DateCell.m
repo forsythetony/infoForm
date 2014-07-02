@@ -47,6 +47,7 @@
 {
     [super setSelected:selected animated:animated];
     
+    /*
     if (!_expanded) {
         [self addDatePicker];
     }
@@ -54,6 +55,7 @@
     {
         [self removeDatePicker];
     }
+     */
     
     
 }
