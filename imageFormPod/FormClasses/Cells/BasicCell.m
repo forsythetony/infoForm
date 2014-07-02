@@ -9,7 +9,9 @@
 #import "BasicCell.h"
 #import "NSString+stringHandlers.h"
 
-@implementation BasicCell
+@implementation BasicCell {
+    NSString *oldTextFieldValue;
+}
 
 - (void)awakeFromNib
 {
@@ -62,6 +64,16 @@
 {
     [textField resignFirstResponder];
     return NO;
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+
+    CellInformation *info = _information;
+    info.fieldValue = textField.text;
+    
 }
 
 @end
