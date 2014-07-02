@@ -20,6 +20,6 @@
 @property (strong, nonatomic) id    placeHolderValue;
 
 +(CellInformation*)createDateCellWithTitle:(NSString*) title andDate:(NSDate*) date;
-+(CellInformation*)createBasicCellWithTitle:(NSString*) title andPlaceholderValue:(NSString*) placeholder;
++(CellInformation*)createBasicCellWithTitle:(NSString*) title andValue:(NSString*) value andPlaceholderValue:(NSString*) placeholder;
 
 @end

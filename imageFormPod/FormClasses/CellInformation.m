@@ -21,13 +21,21 @@
 
     return info;
 }
-+(CellInformation *)createBasicCellWithTitle:(NSString *)title andPlaceholderValue:(NSString *)placeholder
++(CellInformation *)createBasicCellWithTitle:(NSString *)title andValue:(NSString *)value andPlaceholderValue:(NSString *)placeholder
 {
+    
+    
+    
+    
+    
+    
+    
     CellInformation *info = [[self class] new];
     
     info.type = cellTypeBasicText;
     info.fieldTitle = title;
     info.placeHolderValue = placeholder;
+    info.fieldValue = value;
     info.cellHeight = BasicCellHeight;
     return info;
 }
