@@ -35,7 +35,7 @@
     _fieldTitleLabel.textColor          = [Styler dateCellTitleTextColor];
     _fieldTitleLabel.backgroundColor    = [Styler dateCellTitleBackgroundColor];
     
-    _fieldTitleLabel.textAlignment = NSTextAlignmentLeft;
+    _fieldTitleLabel.textAlignment = NSTextAlignmentRight;
     
 }
 -(void)initialSetup
