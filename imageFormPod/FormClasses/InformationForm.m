@@ -263,8 +263,7 @@
         [infoArr addObject:@{[info getJSONKey]: [info getJSONValue]}];
     }
     
-    
-    
+    [self.delegate finishedGatheringCellInformation:[NSArray arrayWithArray:infoArr]];
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
