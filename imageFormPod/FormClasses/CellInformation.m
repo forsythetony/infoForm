@@ -46,4 +46,38 @@
         }
     }
 }
+
+-(NSString *)getJSONKey
+{
+    if (_JSONKey) {
+        return _JSONKey;
+    }
+    else
+    {
+        return nil;
+    }
+}
+-(NSString *)getJSONValue
+{
+    if (!_fieldValue) {
+        return nil;
+    }
+    
+    switch (_type) {
+        case cellTypeDate: {
+            return [(NSDate*)_fieldValue displayDateOfType:sDateTypeSimple];
+        }
+            break;
+        
+        case cellTypeBasicText: {
+            return (NSString*)_fieldValue;
+        }
+            break;
+            
+        default: {
+            return nil;
+        }
+            break;
+    }
+}
 @end
