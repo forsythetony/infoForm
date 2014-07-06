@@ -12,7 +12,7 @@
 
 @interface CellInformation : NSObject
 
-@property (assign, nonatomic) cellType type;
+@property (assign, nonatomic) tfCellType type;
 @property (assign, nonatomic) CGFloat   cellHeight;
 @property (assign, nonatomic) BOOL  expanded;
 
