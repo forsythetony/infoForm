@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ImageFormConstants.h"
 #import "CellInformation.h"
-#import "Cells/DateCell.h"
+#import "DateCell.h"
 #import "BasicCell.h"
 #import "Styler.h"
 #import "NSString+stringHandlers.h"
