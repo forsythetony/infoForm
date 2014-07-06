@@ -249,18 +249,16 @@
 
 -(void)buttonPressSaveInformation:(id) sender
 {
-    NSMutableArray *infoArr = [NSMutableArray new];
+    NSMutableArray *arry = [NSMutableArray new];
     
-    for (NSInteger i = 1 ; i <= [_currentCells count]; i++) {
+    for (CellInformation *info in _currentCells) {
+    
+        [arry addObject:@{[info getJSONKey]: [info getJSONValue]}];
         
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
-        
-        CellInformation* info = [cell performSelector:@selector(information) withObject:nil];
-        
-        [infoArr addObject:@{[info getJSONKey]: [info getJSONValue]}];
     }
     
-    [self.delegate finishedGatheringCellInformation:[NSArray arrayWithArray:infoArr]];
+    [self.delegate finishedGatheringCellInformation:[NSArray arrayWithArray:arry]];
+    
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section

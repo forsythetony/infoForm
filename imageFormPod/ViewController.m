@@ -24,6 +24,7 @@
     infoForm = [[InformationForm alloc] init];
     
     infoForm.view.frame = _formContainerView.bounds;
+    infoForm.delegate = self;
     
     [_formContainerView addSubview:infoForm.view];
     
@@ -40,4 +41,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)finishedGatheringCellInformation:(NSArray *)cellInfo
+{
+    for (CellInformation* info in cellInfo) {
+
+        NSLog(@"%@", info);
+        
+    }
+}
 @end
