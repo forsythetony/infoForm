@@ -10,6 +10,31 @@
 
 @implementation NSDate (helperStuff)
 
++(NSDate *)dateWithString:(NSString *)dateString ofType:(tDateStringType)dateStringType
+{
+    NSDateFormatter *fm     = [NSDateFormatter new];
+    
+    NSString* dateFormatString;
+    
+    switch (dateStringType) {
+        case tDateStringTypeSimple: {
+            
+            dateFormatString = @"MM/dd/yyyy";
+
+        }
+            break;
+            
+        default: {
+            dateFormatString = @"MM/dd/yyyy";
+        }
+            break;
+    }
+    
+    [fm setDateFormat:dateFormatString];
+    
+    return [fm dateFromString:dateString];
+
+}
 -(NSString *)displayWithType:(tDisplayType)displayType
 {
     NSString *dateFormat;
