@@ -20,9 +20,9 @@
 
 #define FooterHeight        50.0
 
-typedef NS_ENUM(NSInteger, cellType) {
-    cellTypeBasicText,
-    cellTypeDate
+typedef NS_ENUM(NSInteger, tfCellType) {
+    tfCellTypeBasic,
+    tfCellTypeDate
 };
 
 @interface ImageFormConstants : NSObject

@@ -14,7 +14,7 @@
 {
     CellInformation* info = [[self class] new];
     
-    info.type = cellTypeDate;
+    info.type = tfCellTypeDate;
     info.fieldTitle = title;
     info.fieldValue = date;
     info.JSONKey = JSONKey;
@@ -27,7 +27,7 @@
 {
     CellInformation *info = [[self class] new];
     
-    info.type = cellTypeBasicText;
+    info.type = tfCellTypeBasic;
     info.fieldTitle = title;
     info.placeHolderValue = placeholder;
     info.fieldValue = value;
@@ -39,7 +39,7 @@
 }
 -(void)setExpanded:(BOOL)expanded
 {
-    if (_type == cellTypeDate) {
+    if (_type == tfCellTypeDate) {
         _expanded = expanded;
         
         if (_expanded) {
@@ -69,12 +69,12 @@
     }
     
     switch (_type) {
-        case cellTypeDate: {
+        case tfCellTypeDate: {
             return [(NSDate*)_fieldValue displayWithType:tDisplayTypeSimple];
         }
             break;
         
-        case cellTypeBasicText: {
+        case tfCellTypeBasic: {
             return (NSString*)_fieldValue;
         }
             break;

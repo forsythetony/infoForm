@@ -114,7 +114,7 @@
     CellInformation *info = _currentCells[indexPath.row];
 
     switch (info.type) {
-        case cellTypeBasicText: {
+        case tfCellTypeBasic: {
             
             BasicCell *cell = [tableView dequeueReusableCellWithIdentifier:basicCellIdentifier];
             
@@ -133,7 +133,7 @@
         }
             break;
             
-        case cellTypeDate: {
+        case tfCellTypeDate: {
             
             DateCell *customCell = (DateCell*)[tableView dequeueReusableCellWithIdentifier:dateCellIdentifier];
             
@@ -165,7 +165,7 @@
     CellInformation *info = _currentCells[indexPath.row];
     
     switch (info.type) {
-        case cellTypeDate: {
+        case tfCellTypeDate: {
             
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
             
