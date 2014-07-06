@@ -1,0 +1,22 @@
+//
+//  NSDate+helperStuff.h
+//  imageFormPod
+//
+//  Created by Anthony Forsythe on 7/6/14.
+//  Copyright (c) 2014 Tonyf. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSInteger, tDisplayType) {
+    
+    tDisplayTypeSimple,
+    tDisplayTypeURL,
+    tDisplayTypePretty
+};
+
+@interface NSDate (helperStuff)
+
+-(NSString*)displayWithType:(tDisplayType) displayType;
+
+@end

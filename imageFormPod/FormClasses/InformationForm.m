@@ -225,9 +225,6 @@
             footerButton.backgroundColor = [Styler footerButtonBackgroundColor];
             footerButton.layer.cornerRadius = [Styler footerButtonCornerRadius];
             
-            
-            
-            
             [footerButton addTarget:self action:@selector(buttonPressSaveInformation:) forControlEvents:UIControlEventTouchUpInside];
             
             
