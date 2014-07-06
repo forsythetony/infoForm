@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ImageInformationForm"
-  s.version      = "0.3.5"
+  s.version      = "0.3.6"
   s.summary      = "This is a short description"
 
   s.homepage     = "https://github.com/forsythetony/infoForm.git"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   
   s.platform     = :ios, "6.0"
 
-  s.source       = { :git => "https://github.com/forsythetony/infoForm.git", :tag => "0.3.5" }
+  s.source       = { :git => "https://github.com/forsythetony/infoForm.git", :tag => "0.3.6" }
 
   s.source_files  = "FormClasses ", "imageFormPod/FormClasses/**/*.{h,m}"
 
