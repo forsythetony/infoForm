@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ImageFormConstants.h"
-#import "NSDate+timelineStuff.h"
+#import "NSDate+helperStuff.h"
 
 @interface CellInformation : NSObject
 

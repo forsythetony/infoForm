@@ -70,7 +70,7 @@
     
     switch (_type) {
         case cellTypeDate: {
-            return [(NSDate*)_fieldValue displayDateOfType:sDateTypeSimple];
+            return [(NSDate*)_fieldValue displayWithType:tDisplayTypeSimple];
         }
             break;
         

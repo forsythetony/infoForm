@@ -17,6 +17,6 @@
 }
 +(NSDate *)minimumDate
 {
-    return [NSDate dateWithv1String:@"01/01/1500"];
+    return [NSDate dateWithString:@"01/01/1500" ofType:tDateStringTypeSimple];
 }
 @end

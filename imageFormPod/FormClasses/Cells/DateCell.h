@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CellInformation.h"
 #import "Styler.h"
-#import "NSDate+timelineStuff.h"
+#import "NSDate+helperStuff.h"
 
 @interface DateCell : UITableViewCell 
 

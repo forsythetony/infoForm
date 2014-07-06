@@ -103,7 +103,7 @@
     _information = information;
     _fieldTitleLabel.text = [_information.fieldTitle addColonForTitle];
     
-    _fieldValueLabel.text = [(NSDate*)_information.fieldValue displayDateOfType:sDateTypPretty];
+    _fieldValueLabel.text = [(NSDate*)_information.fieldValue displayWithType:tDisplayTypePretty];
 
     _expanded = NO;
 }
@@ -128,7 +128,7 @@
     _information.informationHasChanged = YES;
     _information.fieldValue = _datePicker.date;
     
-    _fieldValueLabel.text = [_datePicker.date displayDateOfType:sDateTypPretty];
+    _fieldValueLabel.text = [_datePicker.date displayWithType:tDisplayTypePretty];
 }
 
 
