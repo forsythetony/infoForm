@@ -24,6 +24,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="formContainerView" destination="fZj-IW-kXu" id="HOF-Sd-u60"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtS-hP-niQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

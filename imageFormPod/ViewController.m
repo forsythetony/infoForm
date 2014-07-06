@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    
+    InformationForm *infoForm;
+}
 
 @end
 
@@ -17,7 +20,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    infoForm = [[InformationForm alloc] init];
+    
+    infoForm.view.frame = _formContainerView.bounds;
+    
+    [_formContainerView addSubview:infoForm.view];
+    
+    [self addChildViewController:infoForm];
+    
+    [infoForm didMoveToParentViewController:self];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

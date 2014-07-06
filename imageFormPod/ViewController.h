@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InformationForm.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <InformationFormDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *formContainerView;
+
 
 @end
