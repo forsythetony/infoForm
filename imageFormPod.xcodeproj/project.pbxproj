@@ -29,7 +29,6 @@
 		BAFC8030195F777400E7B494 /* DateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC802E195F777400E7B494 /* DateCell.m */; };
 		BAFC8031195F777400E7B494 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFC802F195F777400E7B494 /* DateCell.xib */; };
 		BAFC803D195F7BCB00E7B494 /* CellInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC803C195F7BCB00E7B494 /* CellInformation.m */; };
-		BAFC8044195F898900E7B494 /* NSDate+timelineStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */; };
 		BAFC804C195F90AC00E7B494 /* Styler.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC804B195F90AC00E7B494 /* Styler.m */; };
 		BAFC8055195F97D700E7B494 /* BasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFC8052195F97D700E7B494 /* BasicCell.xib */; };
 		BAFC8056195F97D700E7B494 /* BasicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC8054195F97D700E7B494 /* BasicCell.m */; };
@@ -80,8 +79,6 @@
 		BAFC802F195F777400E7B494 /* DateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateCell.xib; path = FormClasses/Cells/DateCell.xib; sourceTree = "<group>"; };
 		BAFC803B195F7BCB00E7B494 /* CellInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellInformation.h; path = FormClasses/CellInformation.h; sourceTree = "<group>"; };
 		BAFC803C195F7BCB00E7B494 /* CellInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellInformation.m; path = FormClasses/CellInformation.m; sourceTree = "<group>"; };
-		BAFC8042195F898900E7B494 /* NSDate+timelineStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+timelineStuff.h"; path = "FormClasses/Utilities/NSDate+timelineStuff.h"; sourceTree = "<group>"; };
-		BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+timelineStuff.m"; path = "FormClasses/Utilities/NSDate+timelineStuff.m"; sourceTree = "<group>"; };
 		BAFC804A195F90AC00E7B494 /* Styler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Styler.h; path = FormClasses/Utilities/Styler.h; sourceTree = "<group>"; };
 		BAFC804B195F90AC00E7B494 /* Styler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Styler.m; path = FormClasses/Utilities/Styler.m; sourceTree = "<group>"; };
 		BAFC8052195F97D700E7B494 /* BasicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicCell.xib; path = FormClasses/Cells/BasicCell.xib; sourceTree = "<group>"; };
@@ -117,8 +114,6 @@
 		BA3631491964584200D6C85B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BAFC8042195F898900E7B494 /* NSDate+timelineStuff.h */,
-				BAFC8043195F898900E7B494 /* NSDate+timelineStuff.m */,
 				BA36314619644D5900D6C85B /* NSString+stringHandlers.h */,
 				BA36314719644D5900D6C85B /* NSString+stringHandlers.m */,
 				BA36314F1969D1F000D6C85B /* NSDate+helperStuff.h */,
@@ -395,7 +390,6 @@
 				BAFC8056195F97D700E7B494 /* BasicCell.m in Sources */,
 				BAFC803D195F7BCB00E7B494 /* CellInformation.m in Sources */,
 				BAFC8028195F761100E7B494 /* ImageFormConstants.m in Sources */,
-				BAFC8044195F898900E7B494 /* NSDate+timelineStuff.m in Sources */,
 				BA3631511969D1F000D6C85B /* NSDate+helperStuff.m in Sources */,
 				BAFC804C195F90AC00E7B494 /* Styler.m in Sources */,
 				BAFC8030195F777400E7B494 /* DateCell.m in Sources */,
