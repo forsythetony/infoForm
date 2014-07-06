@@ -15,7 +15,14 @@ typedef NS_ENUM(NSInteger, tDisplayType) {
     tDisplayTypePretty
 };
 
+typedef NS_ENUM(NSInteger, tDateStringType) {
+    tDateStringTypeSimple,
+    tDateStringTypeComplex
+};
+
 @interface NSDate (helperStuff)
+
++(NSDate*)dateWithString:(NSString*) dateString ofType:(tDateStringType) dateStringType;
 
 -(NSString*)displayWithType:(tDisplayType) displayType;
 
