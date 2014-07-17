@@ -32,4 +32,6 @@
 @property (weak, nonatomic) id <InformationFormDelegate> delegate;
 
 -(void)addCellWithInformation:(CellInformation*) information;
+-(void)addTestCells;
+
 @end
