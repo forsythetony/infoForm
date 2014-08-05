@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -13,16 +13,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="570" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zz-tJ-7YO">
+                        <rect key="frame" x="0.0" y="5" width="180" height="39"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.58846382470000003" green="0.14277563909999999" blue="0.1155509473" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="Nkt-qk-bo6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dateValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-m3-EZl">
-                        <rect key="frame" x="185" y="0.0" width="380" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-m3-EZl">
+                        <rect key="frame" x="215" y="5" width="350" height="39"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.019607843829999999" green="0.73333334920000004" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -30,6 +33,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="sgS-m3-EZl" firstAttribute="top" secondItem="8Zz-tJ-7YO" secondAttribute="top" id="6Ni-Gs-tyd"/>
+                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NUt-vO-fNj"/>
+                    <constraint firstAttribute="trailing" secondItem="sgS-m3-EZl" secondAttribute="trailing" constant="5" id="UGl-iz-U8L"/>
+                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="35" id="USm-dw-ZrW"/>
+                    <constraint firstItem="8Zz-tJ-7YO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dev-mV-u5r"/>
+                    <constraint firstAttribute="bottom" secondItem="8Zz-tJ-7YO" secondAttribute="bottom" constant="5" id="hmU-Iu-apJ"/>
+                    <constraint firstAttribute="bottom" secondItem="sgS-m3-EZl" secondAttribute="bottom" constant="5" id="u4b-qd-Et7"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="fieldTitleLabel" destination="8Zz-tJ-7YO" id="8pS-LP-fBf"/>
