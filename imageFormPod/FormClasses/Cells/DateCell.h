@@ -10,6 +10,7 @@
 #import "CellInformation.h"
 #import "Styler.h"
 #import "NSDate+helperStuff.h"
+#import "InformationForm.h"
 
 @interface DateCell : UITableViewCell 
 
@@ -18,7 +19,7 @@
 @property (strong, nonatomic) UIDatePicker*     datePicker;
 
 @property (assign, nonatomic) BOOL expanded;
-
+@property (weak, nonatomic) id parentForm;
 @property (weak, nonatomic) IBOutlet UILabel *fieldTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fieldValueLabel;
 

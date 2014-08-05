@@ -93,7 +93,7 @@
     _expanded = YES;
     
     [self addSubview:_datePicker];
-    
+    [[(UITableViewController*)_parentForm tableView] reloadData];
     [UIView animateWithDuration:0.5 animations:^{
         _datePicker.alpha = 1.0;
     }];
@@ -110,6 +110,8 @@
 -(void)becomeEditable
 {
     if (!_expanded) {
+        
+        [(UITableView*)_parentForm reloadData];
         CGRect oldFrame = self.frame;
         CGRect newFrame = oldFrame;
         newFrame.size.height = _information.cellHeight;

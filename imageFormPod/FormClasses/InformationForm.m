@@ -7,12 +7,16 @@
 //
 
 #import "InformationForm.h"
+#import "PopOverDateViewController.h"
 
-@interface InformationForm () {
+@interface InformationForm () <UIPopoverControllerDelegate> {
     
     NSMutableArray *expandedPaths;
     NSIndexPath *expandedPath;
     
+    UIPopoverController* popController;
+    
+    DateCell* popCell;
 }
 
 @end
@@ -39,6 +43,7 @@
 {
     [super viewDidLoad];
     selectedIndexes = [[NSMutableDictionary alloc] init];
+    [self addPopOverView];
 
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -155,6 +160,7 @@
                 customCell = (DateCell*)[tableView dequeueReusableCellWithIdentifier:dateCellIdentifier];
                 
             }
+            [customCell setParentForm:self];
             
             [customCell setInformation:info];
             
@@ -176,7 +182,7 @@
     
     switch (info.type) {
         case tfCellTypeDate: {
-            
+            /*
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
             
             BOOL isSelected = ![self cellIsSelected:indexPath];
@@ -192,6 +198,11 @@
             
             DateCell *cell = (DateCell*)[tableView cellForRowAtIndexPath:indexPath];
             [cell showDatePicker];
+             */
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+            [self presentPopOverWithCellInfo:info andCell:(DateCell*)[self.tableView cellForRowAtIndexPath:indexPath]];
+            
+            
             
         }
             break;
@@ -283,4 +294,44 @@
             break;
     }
 }
+
+-(void)addPopOverView
+{
+    PopOverDateViewController *content = [[PopOverDateViewController alloc] initWithNibName:@"PopOverDateViewController" bundle:[NSBundle mainBundle]];
+    
+    UIPopoverController *contr = [[UIPopoverController alloc] initWithContentViewController:content];
+    contr.delegate = self;
+    
+    
+    popController = contr;
+    
+    content.view.frame = content.datePick.frame;
+    
+    [contr setPopoverContentSize:content.view.frame.size];
+    
+    
+    
+}
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    for (CellInformation* info in _currentCells) {
+        
+        if (info == [(PopOverDateViewController*)popController.contentViewController info]){
+            
+            info.fieldValue = [[(PopOverDateViewController*)popController.contentViewController datePick] date];
+            [popCell setInformation:info];
+        }
+    }
+   
+}
+-(void)presentPopOverWithCellInfo:(CellInformation*) info andCell:(DateCell*) dateCell
+{
+    [(PopOverDateViewController*)popController.contentViewController setInfo:info];
+    
+    [popController presentPopoverFromRect:dateCell.frame inView:self.tableView permittedArrowDirections:UIPopoverArrowDirectionRight animated:YES];
+    
+    popCell = dateCell;
+}
+
+
 @end
