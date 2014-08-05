@@ -32,7 +32,13 @@
     
     [infoForm didMoveToParentViewController:self];
     
-    [infoForm addTestCells];
+    [infoForm emptySetup];
+    
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(ernable) userInfo:nil repeats:NO];
+    
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,5 +54,9 @@
         NSLog(@"%@", info);
         
     }
+}
+-(void)ernable
+{
+    [infoForm enable];
 }
 @end

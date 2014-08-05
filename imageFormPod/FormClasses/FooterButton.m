@@ -42,6 +42,6 @@
 }
 -(UIColor*)disabledColor {
     
-    return [UIColor warmGrayColor];
+    return [[UIColor successColor] colorWithAlphaComponent:0.3];
 }
 @end

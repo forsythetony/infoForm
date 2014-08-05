@@ -18,6 +18,7 @@
     UIPopoverController* popController;
     
     DateCell* popCell;
+    FooterButton *theFooter;
 }
 
 @end
@@ -64,13 +65,13 @@
     [super viewDidLoad];
     selectedIndexes = [[NSMutableDictionary alloc] init];
     [self addPopOverView];
+    
+    
 
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-//        [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Starting Date" andDate:[NSDate date] andJSONKeyValue:@"DateKey"]];
-//    
-//        [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Name" andValue:@"Running Around" andPlaceholderValue:@"Name" andJSONKeyValue:@"NameKey"]];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -254,7 +255,7 @@
             
             //  Create Button View
             CGFloat footButtonWidth = footerViewFrame.size.width / 2.0;
-            CGFloat footerButtonHeight = footerViewFrame.size.height - 10.0;
+            CGFloat footerButtonHeight = footerViewFrame.size.height * 0.75;
             
             CGRect footerButtonFrame = CGRectMake((footerViewFrame.size.width / 2.0) - (footButtonWidth / 2.0), (footerViewFrame.size.height / 2.5) - (footerButtonHeight / 2.0), footButtonWidth, footerButtonHeight);
             
@@ -265,13 +266,13 @@
             footerButt.titleLabel.textAlignment = [Styler footerButtonTextAlignment];
             footerButt.titleLabel.font = [Styler footerButtonTitleFont];
             footerButt.titleLabel.textColor = [Styler footerButtonTextColor];
-            footerButt.backgroundColor = [Styler footerButtonBackgroundColor];
             footerButt.layer.cornerRadius = [Styler footerButtonCornerRadius];
             
             [footerButt addTarget:self action:@selector(buttonPressSaveInformation:) forControlEvents:UIControlEventTouchUpInside];
             
             
             //  Add as subview to footerview
+            theFooter = footerButt;
             
             [footerView addSubview:footerButt];
   
@@ -354,5 +355,31 @@
     popCell = dateCell;
 }
 
+-(void)emptySetup
+{
+    [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Title" andValue:@"" andPlaceholderValue:@"title" andJSONKeyValue:keyPhotographerName]];
+    [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Date Taken" andDate:[NSDate date] andJSONKeyValue:keyDateTaken]];
+    [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Date Uploaded" andDate:[NSDate date] andJSONKeyValue:keyDateUploaded]];
+    
+
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.tableView setAlpha:0.3];
+    }];
+
+    [theFooter setIsEnabled:NO];
+    
+}
+-(void)enable
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.tableView setAlpha:1.0];
+        }];
+    });
+    
+
+    [theFooter setIsEnabled:YES];
+    
+}
 
 @end

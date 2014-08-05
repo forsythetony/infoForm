@@ -13,7 +13,9 @@
 		BA365A241991224F008E6975 /* PopOverDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA365A211991224F008E6975 /* PopOverDateViewController.m */; };
 		BA365A251991224F008E6975 /* PopOverDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA365A231991224F008E6975 /* PopOverDateViewController.xib */; };
 		BA365A2819912733008E6975 /* FooterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA365A2719912733008E6975 /* FooterButton.m */; };
-		BA365A2A199128AD008E6975 /* FooterButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA365A29199128AD008E6975 /* FooterButton.xib */; };
+		BA365A2D19913727008E6975 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BA365A2C19913727008E6975 /* Constants.m */; };
+		BA365A3119913AF5008E6975 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA365A2F19913AF5008E6975 /* TextViewCell.m */; };
+		BA365A3219913AF5008E6975 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA365A3019913AF5008E6975 /* TextViewCell.xib */; };
 		BAFC7FEA195F6F6F00E7B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */; };
 		BAFC7FEC195F6F6F00E7B494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */; };
 		BAFC7FEE195F6F6F00E7B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FED195F6F6F00E7B494 /* UIKit.framework */; };
@@ -60,7 +62,11 @@
 		BA365A231991224F008E6975 /* PopOverDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopOverDateViewController.xib; path = FormClasses/PopOverDateViewController.xib; sourceTree = "<group>"; };
 		BA365A2619912733008E6975 /* FooterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FooterButton.h; path = FormClasses/FooterButton.h; sourceTree = "<group>"; };
 		BA365A2719912733008E6975 /* FooterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FooterButton.m; path = FormClasses/FooterButton.m; sourceTree = "<group>"; };
-		BA365A29199128AD008E6975 /* FooterButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FooterButton.xib; path = FormClasses/FooterButton.xib; sourceTree = "<group>"; };
+		BA365A2B19913727008E6975 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BA365A2C19913727008E6975 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BA365A2E19913AF5008E6975 /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCell.h; path = FormClasses/TextViewCell.h; sourceTree = "<group>"; };
+		BA365A2F19913AF5008E6975 /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = FormClasses/TextViewCell.m; sourceTree = "<group>"; };
+		BA365A3019913AF5008E6975 /* TextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewCell.xib; path = FormClasses/TextViewCell.xib; sourceTree = "<group>"; };
 		BAFC7FE6195F6F6F00E7B494 /* imageFormPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFormPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -167,6 +173,8 @@
 		BAFC7FEF195F6F6F00E7B494 /* imageFormPod */ = {
 			isa = PBXGroup;
 			children = (
+				BA365A2B19913727008E6975 /* Constants.h */,
+				BA365A2C19913727008E6975 /* Constants.m */,
 				BAFC801E195F72D200E7B494 /* imageFormView */,
 				BAFC7FF8195F6F6F00E7B494 /* AppDelegate.h */,
 				BAFC7FF9195F6F6F00E7B494 /* AppDelegate.m */,
@@ -177,7 +185,6 @@
 				BAFC7FF0195F6F6F00E7B494 /* Supporting Files */,
 				BA365A2619912733008E6975 /* FooterButton.h */,
 				BA365A2719912733008E6975 /* FooterButton.m */,
-				BA365A29199128AD008E6975 /* FooterButton.xib */,
 			);
 			path = imageFormPod;
 			sourceTree = "<group>";
@@ -247,6 +254,9 @@
 				BAFC802D195F777400E7B494 /* DateCell.h */,
 				BAFC802E195F777400E7B494 /* DateCell.m */,
 				BAFC802F195F777400E7B494 /* DateCell.xib */,
+				BA365A2E19913AF5008E6975 /* TextViewCell.h */,
+				BA365A2F19913AF5008E6975 /* TextViewCell.m */,
+				BA365A3019913AF5008E6975 /* TextViewCell.xib */,
 			);
 			name = "Cell Types";
 			sourceTree = "<group>";
@@ -347,8 +357,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFC8002195F6F6F00E7B494 /* Images.xcassets in Resources */,
+				BA365A3219913AF5008E6975 /* TextViewCell.xib in Resources */,
 				BAFC7FF4195F6F6F00E7B494 /* InfoPlist.strings in Resources */,
-				BA365A2A199128AD008E6975 /* FooterButton.xib in Resources */,
 				BAFC7FFD195F6F6F00E7B494 /* Main.storyboard in Resources */,
 				BAFC8031195F777400E7B494 /* DateCell.xib in Resources */,
 				BA365A251991224F008E6975 /* PopOverDateViewController.xib in Resources */,
@@ -409,6 +419,7 @@
 				BA365A241991224F008E6975 /* PopOverDateViewController.m in Sources */,
 				BAFC803D195F7BCB00E7B494 /* CellInformation.m in Sources */,
 				BAFC8028195F761100E7B494 /* ImageFormConstants.m in Sources */,
+				BA365A2D19913727008E6975 /* Constants.m in Sources */,
 				BA3631511969D1F000D6C85B /* NSDate+helperStuff.m in Sources */,
 				BAFC804C195F90AC00E7B494 /* Styler.m in Sources */,
 				BAFC8030195F777400E7B494 /* DateCell.m in Sources */,
@@ -417,6 +428,7 @@
 				BA365A2819912733008E6975 /* FooterButton.m in Sources */,
 				BAFC8021195F731C00E7B494 /* InformationForm.m in Sources */,
 				BAFC7FF6195F6F6F00E7B494 /* main.m in Sources */,
+				BA365A3119913AF5008E6975 /* TextViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

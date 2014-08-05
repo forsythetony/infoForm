@@ -13,6 +13,7 @@
 #import "BasicCell.h"
 #import "Styler.h"
 #import "NSString+stringHandlers.h"
+#import "Constants.h"
 
 @protocol InformationFormDelegate <NSObject>
 
@@ -25,6 +26,8 @@
     NSMutableDictionary *selectedIndexes;
     
 }
+@property (nonatomic, assign) BOOL isActive;
+@property (nonatomic, strong) UIView* inactiveView;
 
 @property (strong, nonatomic) NSArray* currentCells;
 @property (strong, nonatomic) Styler* myStyler;
@@ -33,5 +36,8 @@
 
 -(void)addCellWithInformation:(CellInformation*) information;
 -(void)addTestCells;
+
+-(void)emptySetup;
+-(void)enable;
 
 @end
