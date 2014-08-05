@@ -72,13 +72,16 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
 
-    CellInformation *info = _information;
+/*    CellInformation *info = _information;
 
     
     if (![oldTextFieldValue isEqualToString:textField.text]) {
         info.fieldValue = textField.text;
         info.informationHasChanged = YES;
     }
+ 
+ */
+    _information.fieldTitle = textField.text;
 }
 
 @end
