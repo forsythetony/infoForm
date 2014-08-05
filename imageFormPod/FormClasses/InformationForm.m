@@ -8,6 +8,7 @@
 
 #import "InformationForm.h"
 #import "PopOverDateViewController.h"
+#import "FooterButton.h"
 
 @interface InformationForm () <UIPopoverControllerDelegate, BasicCellDelegate> {
     
@@ -252,27 +253,28 @@
             UIView *footerView = [[UIView alloc] initWithFrame:footerViewFrame];
             
             //  Create Button View
+            CGFloat footButtonWidth = footerViewFrame.size.width / 2.0;
+            CGFloat footerButtonHeight = footerViewFrame.size.height - 10.0;
             
-            CGRect footerButtonFrame = footerViewFrame;
+            CGRect footerButtonFrame = CGRectMake((footerViewFrame.size.width / 2.0) - (footButtonWidth / 2.0), (footerViewFrame.size.height / 2.5) - (footerButtonHeight / 2.0), footButtonWidth, footerButtonHeight);
             
-            UIButton *footerButton = [[UIButton alloc] initWithFrame:footerButtonFrame];
+        
             
-            [footerButton setTitle:@"Save" forState:UIControlStateNormal];
+            FooterButton *footerButt = [[FooterButton alloc] initWithFrame:footerButtonFrame];
             
-            footerButton.titleLabel.textAlignment = [Styler footerButtonTextAlignment];
-            footerButton.titleLabel.font = [Styler footerButtonTitleFont];
-            footerButton.titleLabel.textColor = [Styler footerButtonTextColor];
-            footerButton.backgroundColor = [Styler footerButtonBackgroundColor];
-            footerButton.layer.cornerRadius = [Styler footerButtonCornerRadius];
+            footerButt.titleLabel.textAlignment = [Styler footerButtonTextAlignment];
+            footerButt.titleLabel.font = [Styler footerButtonTitleFont];
+            footerButt.titleLabel.textColor = [Styler footerButtonTextColor];
+            footerButt.backgroundColor = [Styler footerButtonBackgroundColor];
+            footerButt.layer.cornerRadius = [Styler footerButtonCornerRadius];
             
-            [footerButton addTarget:self action:@selector(buttonPressSaveInformation:) forControlEvents:UIControlEventTouchUpInside];
+            [footerButt addTarget:self action:@selector(buttonPressSaveInformation:) forControlEvents:UIControlEventTouchUpInside];
             
             
             //  Add as subview to footerview
             
-            [footerView addSubview:footerButton];
-            
-            
+            [footerView addSubview:footerButt];
+  
             
             return footerView;
             

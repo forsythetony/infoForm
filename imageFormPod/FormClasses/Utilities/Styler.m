@@ -103,7 +103,7 @@
 
 +(UIFont *)footerButtonTitleFont
 {
-    CGFloat fontSize = 15.0;
+    CGFloat fontSize = 20.0;
     
     return [UIFont fontWithName:globalFont size:fontSize];
 }
