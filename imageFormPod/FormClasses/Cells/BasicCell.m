@@ -59,6 +59,9 @@
     
     _fieldValueTextField.placeholder = (NSString*)information.placeHolderValue;
     _fieldValueTextField.text = (NSString*)information.fieldValue;
+    
+    _information = information;
+    
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -71,17 +74,9 @@
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
-
-/*    CellInformation *info = _information;
-
+    _information.fieldValue = textField.text;
     
-    if (![oldTextFieldValue isEqualToString:textField.text]) {
-        info.fieldValue = textField.text;
-        info.informationHasChanged = YES;
-    }
- 
- */
-    _information.fieldTitle = textField.text;
+    [self.delegate finishedEditingWithNewInformation:_information forBasicCell:self];
 }
 
 @end

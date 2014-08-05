@@ -10,7 +10,17 @@
 #import "CellInformation.h"
 #import "Styler.h"
 
+@class BasicCell;
+
+@protocol BasicCellDelegate <NSObject>
+
+-(void)finishedEditingWithNewInformation:(CellInformation*) info forBasicCell:(BasicCell*) basicCellCopy;
+
+
+@end
 @interface BasicCell : UITableViewCell <UITextFieldDelegate>
+
+@property (weak, nonatomic) id <BasicCellDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *fieldTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *fieldValueTextField;

@@ -9,7 +9,7 @@
 #import "InformationForm.h"
 #import "PopOverDateViewController.h"
 
-@interface InformationForm () <UIPopoverControllerDelegate> {
+@interface InformationForm () <UIPopoverControllerDelegate, BasicCellDelegate> {
     
     NSMutableArray *expandedPaths;
     NSIndexPath *expandedPath;
@@ -22,6 +22,25 @@
 @end
 
 @implementation InformationForm
+
+-(void)finishedEditingWithNewInformation:(CellInformation *)info forBasicCell:(BasicCell*) basicCellCopy
+{
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:_currentCells];
+    
+    for (CellInformation* information in _currentCells) {
+        
+        if (information == info) {
+            NSInteger indexOf = [_currentCells indexOfObject:information];
+            [arr replaceObjectAtIndex:indexOf withObject:info];
+            
+            
+        }
+    }
+    
+    _currentCells = [NSArray arrayWithArray:arr];
+    
+    [basicCellCopy setInformation:info];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -141,7 +160,7 @@
                 cell = (BasicCell*)[tableView dequeueReusableCellWithIdentifier:basicCellIdentifier];
                 
             }
-            
+            [cell setDelegate:self];
             [cell setInformation:info];
             
             return cell;
