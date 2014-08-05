@@ -57,14 +57,18 @@
     if (!_currentCells) {
         _currentCells = [NSArray new];
     }
+    [self.tableView beginUpdates];
     
     NSMutableArray *cells = [NSMutableArray arrayWithArray:_currentCells];
     
-    [cells addObject:information];
+    [cells insertObject:information atIndex:0];
     
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    
+
     _currentCells = [NSArray arrayWithArray:cells];
     
-    [self.tableView reloadData];
+    [self.tableView endUpdates];
 }
 
 
@@ -116,7 +120,7 @@
 {
     static NSString *dateCellIdentifier = @"DateCell";
     static NSString *basicCellIdentifier = @"BasicCell";
-    
+     
     CellInformation *info = _currentCells[indexPath.row];
 
     switch (info.type) {

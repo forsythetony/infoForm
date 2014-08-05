@@ -32,7 +32,7 @@
     
     [infoForm didMoveToParentViewController:self];
     
-    
+    [infoForm addTestCells];
 }
 
 - (void)didReceiveMemoryWarning
