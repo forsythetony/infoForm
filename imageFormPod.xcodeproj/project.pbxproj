@@ -138,6 +138,26 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		BA365A58199592AB008E6975 /* Date Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC802D195F777400E7B494 /* DateCell.h */,
+				BAFC802E195F777400E7B494 /* DateCell.m */,
+				BAFC802F195F777400E7B494 /* DateCell.xib */,
+			);
+			name = "Date Cell";
+			sourceTree = "<group>";
+		};
+		BA365A59199592B8008E6975 /* Basic Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC8053195F97D700E7B494 /* BasicCell.h */,
+				BAFC8054195F97D700E7B494 /* BasicCell.m */,
+				BAFC8052195F97D700E7B494 /* BasicCell.xib */,
+			);
+			name = "Basic Cell";
+			sourceTree = "<group>";
+		};
 		BAFC7FDD195F6F6F00E7B494 = {
 			isa = PBXGroup;
 			children = (
@@ -248,12 +268,8 @@
 		BAFC8029195F767200E7B494 /* Cell Types */ = {
 			isa = PBXGroup;
 			children = (
-				BAFC8053195F97D700E7B494 /* BasicCell.h */,
-				BAFC8054195F97D700E7B494 /* BasicCell.m */,
-				BAFC8052195F97D700E7B494 /* BasicCell.xib */,
-				BAFC802D195F777400E7B494 /* DateCell.h */,
-				BAFC802E195F777400E7B494 /* DateCell.m */,
-				BAFC802F195F777400E7B494 /* DateCell.xib */,
+				BA365A59199592B8008E6975 /* Basic Cell */,
+				BA365A58199592AB008E6975 /* Date Cell */,
 				BA365A2E19913AF5008E6975 /* TextViewCell.h */,
 				BA365A2F19913AF5008E6975 /* TextViewCell.m */,
 				BA365A3019913AF5008E6975 /* TextViewCell.xib */,

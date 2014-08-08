@@ -25,6 +25,8 @@
 
 +(UIColor*)dateCellValueBackgroundColor;
 +(UIColor*)dateCellValueTextColor;
++(UIColor*)dateCellValueTextColorForEditability:(BOOL) editability;
+
 
 //  Other
 +(UIDatePickerMode)dateCellDatePickerMode;

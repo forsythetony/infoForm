@@ -37,6 +37,21 @@
     
     return info;
 }
+
++(CellInformation *)createDateCellWithTitle:(NSString *)title andDate:(NSDate *)date andJSONKeyValue:(NSString *)JSONKey andIsEditable:(BOOL)editability
+{
+    CellInformation* info = [[self class] new];
+    
+    info.type = tfCellTypeDate;
+    info.fieldTitle = title;
+    info.fieldValue = date;
+    info.JSONKey = JSONKey;
+    info.editability = editability;
+    [info setExpanded:NO];
+    info.informationHasChanged = NO;
+    
+    return info;
+}
 -(void)setExpanded:(BOOL)expanded
 {
     if (_type == tfCellTypeDate) {

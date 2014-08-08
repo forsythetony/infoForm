@@ -9,6 +9,7 @@
 #import "DateCell.h"
 #import "NSString+stringHandlers.h"
 
+
 @implementation DateCell
 
 - (void)awakeFromNib
@@ -105,6 +106,10 @@
     
     _fieldValueLabel.text = [(NSDate*)_information.fieldValue displayWithType:tDisplayTypePretty];
 
+    _fieldValueLabel.textColor = [Styler dateCellValueTextColorForEditability:information.editability];
+    
+    [_fieldValueLabel setEnabled:[information editability]];
+    
     _expanded = NO;
 }
 -(void)becomeEditable

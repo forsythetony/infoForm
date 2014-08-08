@@ -22,9 +22,11 @@
 @property (strong, nonatomic) NSString* fieldTitle;
 @property (strong, nonatomic) id    fieldValue;
 @property (strong, nonatomic) id    placeHolderValue;
+@property (assign, nonatomic) BOOL  editability;
 
 +(CellInformation*)createDateCellWithTitle:(NSString*) title andDate:(NSDate*) date andJSONKeyValue:(NSString*) JSONKey;
 +(CellInformation*)createBasicCellWithTitle:(NSString*) title andValue:(NSString*) value andPlaceholderValue:(NSString*) placeholder andJSONKeyValue:(NSString*) JSONKey;
++(CellInformation*)createDateCellWithTitle:(NSString*) title andDate:(NSDate*) date andJSONKeyValue:(NSString*) JSONKey andIsEditable:(BOOL) editability;
 
 -(NSString*)getJSONKey;
 -(NSString*)getJSONValue;

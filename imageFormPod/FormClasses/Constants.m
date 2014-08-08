@@ -11,3 +11,10 @@
 NSString * const keyDateTaken = @"keyDateTakenJSON";
 NSString * const keyDateUploaded = @"keyDateUploadedJSON";
 NSString * const keyPhotographerName = @"keyPhotographerNameJSON";
+NSString * const keyTitle = @"keyTitleJSON";
+
+NSString * const labelDateTaken = @"Date Taken";
+NSString * const labelDateUploaded = @"Date Uploaded";
+NSString * const labelTakenBy = @"Taken By";
+NSString * const labelTitle = @"Title";
+

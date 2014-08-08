@@ -357,10 +357,36 @@
 
 -(void)emptySetup
 {
-    [self addCellWithInformation:[CellInformation createBasicCellWithTitle:@"Title" andValue:@"" andPlaceholderValue:@"title" andJSONKeyValue:keyPhotographerName]];
-    [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Date Taken" andDate:[NSDate date] andJSONKeyValue:keyDateTaken]];
-    [self addCellWithInformation:[CellInformation createDateCellWithTitle:@"Date Uploaded" andDate:[NSDate date] andJSONKeyValue:keyDateUploaded]];
     
+    
+    CellInformation *titleInformation = [CellInformation createBasicCellWithTitle:labelTitle
+                                                                         andValue:@""
+                                                              andPlaceholderValue:@"Title"
+                                                                  andJSONKeyValue:keyTitle];
+    [self addCellWithInformation:titleInformation];
+    
+    
+    CellInformation *takenByInformation = [CellInformation createBasicCellWithTitle:labelTakenBy andValue:@"" andPlaceholderValue:@"Name" andJSONKeyValue:keyPhotographerName];
+    
+    [self addCellToEndWithInformation:takenByInformation];
+    
+    CellInformation *dateTakenInformation = [CellInformation createDateCellWithTitle:labelDateTaken
+                                                                             andDate:[NSDate date]
+                                                                     andJSONKeyValue:keyDateTaken
+                                                                       andIsEditable:YES];
+    
+    [self addCellToEndWithInformation:dateTakenInformation];
+    
+    
+    
+    
+    
+    CellInformation *dateUploadedInformation = [CellInformation createDateCellWithTitle:labelDateUploaded
+                                                                                andDate:[NSDate date]
+                                                                        andJSONKeyValue:keyDateUploaded
+                                                                          andIsEditable:NO];
+    
+    [self addCellToEndWithInformation:dateUploadedInformation];
 
     [UIView animateWithDuration:0.3 animations:^{
         [self.tableView setAlpha:0.3];
@@ -380,6 +406,60 @@
 
     [theFooter setIsEnabled:YES];
     
+}
+-(void)moveTitleCellToTop
+{
+    NSInteger indexOfInfo = 999;
+    
+    
+    for (CellInformation* info in _currentCells) {
+        
+        if (info.fieldTitle == keyTitle) {
+            
+            indexOfInfo = [_currentCells indexOfObject:info];
+        }
+    }
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:_currentCells];
+    
+    if (indexOfInfo != 999) {
+     
+        CellInformation* theInfo = [arr objectAtIndex:indexOfInfo];
+        
+        NSIndexPath *oldIndexPath = [NSIndexPath indexPathForRow:indexOfInfo inSection:0];
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        
+        [arr removeObjectAtIndex:indexOfInfo];
+        [arr insertObject:theInfo atIndex:indexOfInfo];
+        
+        [self.tableView beginUpdates];
+        
+        [self.tableView moveRowAtIndexPath:oldIndexPath toIndexPath:newIndexPath];
+        
+        [self.tableView endUpdates];
+        
+        
+    }
+    
+    
+}
+-(void)addCellToEndWithInformation:(CellInformation *)information
+{
+    if (!_currentCells) {
+        _currentCells = [NSArray new];
+    }
+    [self.tableView beginUpdates];
+    
+    NSMutableArray *cells = [NSMutableArray arrayWithArray:_currentCells];
+    
+    [cells addObject:information];
+    
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[cells indexOfObject:information] inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    
+    
+    _currentCells = [NSArray arrayWithArray:cells];
+    
+    [self.tableView endUpdates];
+
 }
 
 @end

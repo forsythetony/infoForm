@@ -49,7 +49,17 @@
 {
     return [UIColor black25PercentColor];
 }
-
++(UIColor *)dateCellValueTextColorForEditability:(BOOL)editability
+{
+    if (editability) {
+        return [UIColor blackColor];
+    }
+    else
+    {
+        return [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    }
+}
+//  Other
 +(UIDatePickerMode)dateCellDatePickerMode
 {
     return UIDatePickerModeDate;
