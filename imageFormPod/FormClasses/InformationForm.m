@@ -462,4 +462,8 @@
 
 }
 
+-(void)enableFooter
+{
+    [theFooter setIsEnabled:YES];
+}
 @end

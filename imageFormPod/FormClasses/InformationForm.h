@@ -39,5 +39,6 @@
 
 -(void)emptySetup;
 -(void)enable;
+-(void)enableFooter;
 
 @end
