@@ -21,6 +21,8 @@
 {
     [self configureTextfield];
     [self configureTitleLabel];
+    _fieldValueTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+    
 }
 -(void)configureTitleLabel
 {
