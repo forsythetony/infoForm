@@ -220,8 +220,13 @@
             DateCell *cell = (DateCell*)[tableView cellForRowAtIndexPath:indexPath];
             [cell showDatePicker];
              */
+           
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
-            [self presentPopOverWithCellInfo:info andCell:(DateCell*)[self.tableView cellForRowAtIndexPath:indexPath]];
+            
+            if (info.editability) {
+                [self presentPopOverWithCellInfo:info andCell:(DateCell*)[self.tableView cellForRowAtIndexPath:indexPath]];
+            }
+            
             
             
             

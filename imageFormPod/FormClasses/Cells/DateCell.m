@@ -108,7 +108,6 @@
 
     _fieldValueLabel.textColor = [Styler dateCellValueTextColorForEditability:information.editability];
     
-    [_fieldValueLabel setEnabled:[information editability]];
     
     _expanded = NO;
 }
