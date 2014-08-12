@@ -52,9 +52,6 @@ float sliderMinValue = 0.0;
 }
 -(void)sliderSetup
 {
-    fieldValueSlider.maximumTrackTintColor = [Styler sliderCellSliderMaxTrackColor];
-    fieldValueSlider.minimumTrackTintColor = [Styler sliderCellSliderMinTrackColor];
-    
     [fieldValueSlider setMinimumValue:sliderMinValue];
     [fieldValueSlider setMaximumValue:sliderMaxValue];
     [fieldValueSlider setValue:0.0];
