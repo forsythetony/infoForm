@@ -523,7 +523,7 @@
     NSString *confidence = information.confidence;
     
     if (titleString) {
-        [cells addObject:[CellInformation createBasicCellWithTitle:labelTitle andValue:titleString andPlaceholderValue:@"Title" andJSONKeyValue:@"aKey"]];
+        [cells addObject:[CellInformation createBasicCellWithTitle:labelTitle andValue:titleString andPlaceholderValue:@"Title" andJSONKeyValue:@"aKey" andEditability:YES]];
     }
     if (uploader) {
         [cells addObject:[CellInformation createBasicCellWithTitle:labelUploadedBy andValue:uploader andPlaceholderValue:@"Name" andJSONKeyValue:@"jsonUploader" andEditability:NO]];
