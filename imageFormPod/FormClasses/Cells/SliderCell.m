@@ -33,6 +33,7 @@ float sliderMinValue = 0.0;
 }
 -(void)mainSetup
 {
+    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     self.backgroundColor = [Styler mainBackground];
 }
 -(void)labelSetup

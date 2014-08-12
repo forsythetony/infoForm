@@ -29,6 +29,8 @@
 {
     self.backgroundColor = [Styler mainBackground];
     self.contentView.backgroundColor = [Styler mainBackground];
+    
+    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
 }
 -(void)configureTitleLabel
 {
