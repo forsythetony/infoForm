@@ -23,6 +23,21 @@
     return info;
     
 }
++(CellInformation *)createBasicCellWithTitle:(NSString *)title andValue:(NSString *)value andPlaceholderValue:(NSString *)placeholder andJSONKeyValue:(NSString *)JSONKey andEditability:(BOOL)editability
+{
+    CellInformation *info = [[self class] new];
+    
+    info.type = tfCellTypeBasic;
+    info.fieldTitle = title;
+    info.placeHolderValue = placeholder;
+    info.fieldValue = value;
+    info.cellHeight = BasicCellHeight;
+    info.JSONKey = JSONKey;
+    info.informationHasChanged = NO;
+    info.editability = editability;
+    return info;
+
+}
 +(CellInformation *)createDateCellWithTitle:(NSString *)title andDate:(NSDate *)date andJSONKeyValue:(NSString *)JSONKey
 {
     CellInformation* info = [[self class] new];

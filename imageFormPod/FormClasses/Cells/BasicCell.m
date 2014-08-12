@@ -45,7 +45,7 @@
     _fieldValueTextField.backgroundColor    = [Styler basicCellValueBackgroundColor];
     _fieldValueTextField.textColor          = [Styler basicCellValueTextColor];
     _fieldValueTextField.layer.cornerRadius = [Styler basicCellValueCornerRadius];
-    
+
     _fieldValueTextField.font = [Styler basicCellTextValueFont];
     
     _fieldValueTextField.borderStyle = UITextBorderStyleNone;
@@ -75,6 +75,8 @@
     _fieldValueTextField.text = (NSString*)information.fieldValue;
     
     _information = information;
+    
+    [_fieldValueTextField setEnabled:information.editability];
     
 }
 -(void)setPlaceholderText:(NSString*) placeholderText

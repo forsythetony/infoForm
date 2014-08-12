@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateValue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgS-m3-EZl">
-                        <rect key="frame" x="215" y="5" width="350" height="39"/>
+                        <rect key="frame" x="210" y="5" width="355" height="39"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.019607843829999999" green="0.73333334920000004" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,7 +37,7 @@
                     <constraint firstItem="sgS-m3-EZl" firstAttribute="top" secondItem="8Zz-tJ-7YO" secondAttribute="top" id="6Ni-Gs-tyd"/>
                     <constraint firstItem="8Zz-tJ-7YO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NUt-vO-fNj"/>
                     <constraint firstAttribute="trailing" secondItem="sgS-m3-EZl" secondAttribute="trailing" constant="5" id="UGl-iz-U8L"/>
-                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="35" id="USm-dw-ZrW"/>
+                    <constraint firstItem="sgS-m3-EZl" firstAttribute="leading" secondItem="8Zz-tJ-7YO" secondAttribute="trailing" constant="30" id="USm-dw-ZrW"/>
                     <constraint firstItem="8Zz-tJ-7YO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dev-mV-u5r"/>
                     <constraint firstAttribute="bottom" secondItem="8Zz-tJ-7YO" secondAttribute="bottom" constant="5" id="hmU-Iu-apJ"/>
                     <constraint firstAttribute="bottom" secondItem="sgS-m3-EZl" secondAttribute="bottom" constant="5" id="u4b-qd-Et7"/>

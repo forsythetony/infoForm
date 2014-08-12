@@ -525,11 +525,11 @@
     if (titleString) {
         [cells addObject:[CellInformation createBasicCellWithTitle:labelTitle andValue:titleString andPlaceholderValue:@"Title" andJSONKeyValue:@"aKey"]];
     }
+    if (uploader) {
+        [cells addObject:[CellInformation createBasicCellWithTitle:labelUploadedBy andValue:uploader andPlaceholderValue:@"Name" andJSONKeyValue:@"jsonUploader" andEditability:NO]];
+    }
     if (dateTaken) {
         [cells addObject:[CellInformation createDateCellWithTitle:labelDateTaken andDate:dateTaken andJSONKeyValue:@"jsonDateTaken" andIsEditable:YES]];
-    }
-    if (uploader) {
-        [cells addObject:[CellInformation createBasicCellWithTitle:labelUploadedBy andValue:uploader andPlaceholderValue:@"Name" andJSONKeyValue:@"jsonUploader"]];
     }
     
     if (confidence) {
