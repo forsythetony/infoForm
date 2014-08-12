@@ -23,5 +23,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency 'Colours'
-
+  s.dependency 'pop', '~> 1.0'
 end

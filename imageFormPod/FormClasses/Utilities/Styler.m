@@ -211,6 +211,18 @@
     return [UIColor chartreuseColor];
 
 }
++(UIColor *)sliderCellSliderHighTrackColor
+{
+    return [UIColor chartreuseColor];
+}
++(UIColor *)sliderCellSliderMediumTrackColor
+{
+    return [UIColor warningColor];
+}
++(UIColor *)sliderCellSliderLowTrackColor
+{
+    return [UIColor dangerColor];
+}
 
 //  Text Alignment
 

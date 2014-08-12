@@ -88,6 +88,9 @@
 
 +(UIColor*)sliderCellSliderMaxTrackColor;
 +(UIColor*)sliderCellSliderMinTrackColor;
++(UIColor*)sliderCellSliderLowTrackColor;
++(UIColor*)sliderCellSliderMediumTrackColor;
++(UIColor*)sliderCellSliderHighTrackColor;
 
 
 

@@ -76,10 +76,29 @@ float sliderMinValue = 0.0;
         
         if (value <= 100 && value >= 0) {
             [fieldValueSlider setValue:value animated:YES];
+            [self updateSliderColorWithValue:value];
             [self setLabelWithFloat:value];
         }
     }
 }
+-(void)updateSliderColorWithValue:(float) newValue
+{
+    UIColor *newColor;
+    
+    if (newValue >= 0 && newValue <= 33) {
+        newColor = [Styler sliderCellSliderLowTrackColor];
+    }
+    else if( newValue > 33 && newValue <= 66) {
+        newColor = [Styler sliderCellSliderMediumTrackColor];
+    }
+    else
+    {
+        newColor = [Styler sliderCellSliderHighTrackColor];
+    }
+    
+    [fieldValueSlider setMinimumTrackTintColor:newColor];
+}
+
 -(void)setLabelWithFloat:(float) newValue
 {
     NSString *labelString = [NSString stringWithFormat:@"%.0f", newValue];
