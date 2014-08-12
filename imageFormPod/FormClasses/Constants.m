@@ -19,3 +19,5 @@ NSString * const labelTakenBy = @"Taken By";
 NSString * const labelTitle = @"Title";
 NSString * const labelConfidence = @"Confidence";
 
+NSString * const labelUploadedBy = @"Uploader";
+

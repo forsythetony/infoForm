@@ -509,4 +509,35 @@
 {
     [theFooter setIsEnabled:YES];
 }
+-(void)updateFormWithInformation:(imageObject *)information
+{
+    
+    NSMutableArray *cells = [NSMutableArray new];
+    
+    NSString *titleString = information.title;
+    
+    NSDate *dateTaken = information.date;
+    
+    NSString *uploader = information.uploader;
+    
+    NSString *confidence = information.confidence;
+    
+    if (titleString) {
+        [cells addObject:[CellInformation createBasicCellWithTitle:labelTitle andValue:titleString andPlaceholderValue:@"Title" andJSONKeyValue:@"aKey"]];
+    }
+    if (dateTaken) {
+        [cells addObject:[CellInformation createDateCellWithTitle:labelDateTaken andDate:dateTaken andJSONKeyValue:@"jsonDateTaken" andIsEditable:YES]];
+    }
+    if (uploader) {
+        [cells addObject:[CellInformation createBasicCellWithTitle:labelUploadedBy andValue:uploader andPlaceholderValue:@"Name" andJSONKeyValue:@"jsonUploader"]];
+    }
+    
+    if (confidence) {
+        
+        [cells addObject:[CellInformation createSliderCellWithTitle:labelConfidence andValue:[confidence convertStringToNumber] andJSONKey:@"jsonConfidence"]];
+    }
+    
+    _currentCells = [NSArray arrayWithArray:cells];
+    
+}
 @end

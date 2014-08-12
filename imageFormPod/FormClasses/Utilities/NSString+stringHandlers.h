@@ -11,5 +11,6 @@
 @interface NSString (stringHandlers)
 
 -(NSString*)addColonForTitle;
+-(NSNumber*)convertStringToNumber;
 
 @end

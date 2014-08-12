@@ -14,6 +14,7 @@
 #import "Styler.h"
 #import "NSString+stringHandlers.h"
 #import "Constants.h"
+#import "imageObject.h"
 
 @protocol InformationFormDelegate <NSObject>
 
@@ -31,6 +32,7 @@
 
 @property (strong, nonatomic) NSArray* currentCells;
 @property (strong, nonatomic) Styler* myStyler;
+@property (strong, nonatomic) imageObject* imageInformation;
 
 @property (weak, nonatomic) id <InformationFormDelegate> delegate;
 
@@ -42,5 +44,8 @@
 -(void)emptySetup;
 -(void)enable;
 -(void)enableFooter;
+
+-(void)updateFormWithInformation:(imageObject*) information;
+
 
 @end

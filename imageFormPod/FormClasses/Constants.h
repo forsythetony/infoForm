@@ -11,6 +11,7 @@ extern NSString * const labelDateTaken;
 extern NSString * const labelDateUploaded;
 extern NSString * const labelTakenBy;
 extern NSString * const labelTitle;
+extern NSString * const labelUploadedBy;
 
 extern NSString * const keyDateTaken;
 extern NSString * const keyDateUploaded;

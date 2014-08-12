@@ -20,4 +20,11 @@
         return [NSString stringWithFormat:@"%@:", self];
     }
 }
+
+-(NSNumber *)convertStringToNumber
+{
+    NSInteger intVal = [self integerValue];
+    
+    return [NSNumber numberWithInteger:intVal];
+}
 @end
