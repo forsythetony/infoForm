@@ -539,5 +539,6 @@
     
     _currentCells = [NSArray arrayWithArray:cells];
     
+    [[self tableView] reloadData];
 }
 @end
