@@ -67,8 +67,16 @@
     selectedIndexes = [[NSMutableDictionary alloc] init];
     [self addPopOverView];
     
+    [self setupTableview];
     
 
+}
+-(void)setupTableview
+{
+    [self.view setBackgroundColor:[Styler mainBackground]];
+    [self.tableView setBackgroundColor:[Styler mainBackground]];
+    
+    [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 -(void)viewDidAppear:(BOOL)animated
 {

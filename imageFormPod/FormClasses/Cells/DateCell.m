@@ -19,6 +19,11 @@
     [_datePicker removeFromSuperview];
     
 }
+-(void)mainConfiguration
+{
+    self.backgroundColor = [Styler mainBackground];
+    self.contentView.backgroundColor = [Styler mainBackground];
+}
 -(void)configureValueLabel
 {
     _fieldValueLabel.font = [Styler dateCellTitleFont];
@@ -42,6 +47,7 @@
 }
 -(void)initialSetup
 {
+    [self mainConfiguration];
     [self configureValueLabel];
     [self configureTitleLabel];
 }

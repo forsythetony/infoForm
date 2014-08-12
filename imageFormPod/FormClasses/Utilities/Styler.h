@@ -12,6 +12,12 @@
 
 @interface Styler : NSObject
 
+/* 
+    Main
+*/
+
++(UIColor*)mainBackground;
+
 /*
     Date Cell Style Attributes
 */
@@ -46,6 +52,11 @@
 +(UIColor*)basicCellValueBackgroundColor;
 +(UIColor*)basicCellValueTextColor;
 
++(UIColor*)basicCellValuePlaceholderColorValue;
+
+//  Other
+
++(CGFloat)basicCellValueCornerRadius;
 /*
     Table Footer Button Style Attributes
 */

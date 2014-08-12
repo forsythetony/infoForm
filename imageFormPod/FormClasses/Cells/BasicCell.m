@@ -19,10 +19,16 @@
 }
 -(void)initialSetup
 {
+
     [self configureTextfield];
     [self configureTitleLabel];
     _fieldValueTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
-    
+        [self mainConfiguration];
+}
+-(void)mainConfiguration
+{
+    self.backgroundColor = [Styler mainBackground];
+    self.contentView.backgroundColor = [Styler mainBackground];
 }
 -(void)configureTitleLabel
 {
@@ -38,12 +44,17 @@
 {
     _fieldValueTextField.backgroundColor    = [Styler basicCellValueBackgroundColor];
     _fieldValueTextField.textColor          = [Styler basicCellValueTextColor];
-
+    _fieldValueTextField.layer.cornerRadius = [Styler basicCellValueCornerRadius];
+    
     _fieldValueTextField.font = [Styler basicCellTextValueFont];
     
     _fieldValueTextField.borderStyle = UITextBorderStyleNone;
     
     _fieldValueTextField.delegate = self;
+    
+
+    
+    
 
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -59,11 +70,23 @@
 {
     _fieldTitleLabel.text = [information.fieldTitle addColonForTitle];
     
-    _fieldValueTextField.placeholder = (NSString*)information.placeHolderValue;
+    [self setPlaceholderText:(NSString*)information.placeHolderValue];
+    
     _fieldValueTextField.text = (NSString*)information.fieldValue;
     
     _information = information;
     
+}
+-(void)setPlaceholderText:(NSString*) placeholderText
+{
+    if ([_fieldValueTextField respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        
+        [_fieldValueTextField setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:placeholderText attributes:@{NSForegroundColorAttributeName: [Styler basicCellValuePlaceholderColorValue]}]];
+    }
+    else
+    {
+        [_fieldValueTextField setPlaceholder:placeholderText];
+    }
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {

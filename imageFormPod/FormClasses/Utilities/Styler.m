@@ -13,7 +13,16 @@
 
 @implementation Styler
 
+/*
+    Main
+*/
 
+//  Colors
+
++(UIColor *)mainBackground
+{
+    return [UIColor charcoalColor];
+}
 /*
     Date Cell Style Attributes
 */
@@ -39,7 +48,7 @@
 }
 +(UIColor *)dateCellTitleTextColor
 {
-    return [UIColor black25PercentColor];
+    return [UIColor icebergColor];
 }
 +(UIColor *)dateCellValueBackgroundColor
 {
@@ -47,16 +56,16 @@
 }
 +(UIColor *)dateCellValueTextColor
 {
-    return [UIColor black25PercentColor];
+    return [UIColor icebergColor];
 }
 +(UIColor *)dateCellValueTextColorForEditability:(BOOL)editability
 {
     if (editability) {
-        return [UIColor blackColor];
+        return [UIColor icebergColor];
     }
     else
     {
-        return [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        return [[UIColor icebergColor] colorWithAlphaComponent:0.5];
     }
 }
 //  Other
@@ -95,7 +104,7 @@
 }
 +(UIColor *)basicCellTitleTextColor
 {
-    return [UIColor black25PercentColor];
+    return [UIColor icebergColor];
 }
 
 +(UIColor *)basicCellValueBackgroundColor
@@ -104,9 +113,20 @@
 }
 +(UIColor *)basicCellValueTextColor
 {
-    return [UIColor black25PercentColor];
+    return [UIColor icebergColor];
 }
 
++(UIColor*)basicCellValuePlaceholderColorValue
+{
+    return [[UIColor icebergColor] colorWithAlphaComponent:0.4];
+}
+
+//  Other
+
++(CGFloat)basicCellValueCornerRadius
+{
+    return 5.0;
+}
 /*
     Footer Button
 */
@@ -164,7 +184,7 @@
 
 +(UIColor *)sliderCellTitleTextColor
 {
-    return [UIColor black25PercentColor];
+    return [UIColor icebergColor];
 }
 +(UIColor *)sliderCellTitleBackgroundColor
 {
@@ -173,7 +193,7 @@
 
 +(UIColor *)sliderCellValueLabelTextColor
 {
-    return [UIColor black25PercentColor];
+    return [UIColor icebergColor];
 }
 
 +(UIColor *)sliderCellvalueLabelBackgroundColor
@@ -183,12 +203,12 @@
 
 +(UIColor *)sliderCellSliderMaxTrackColor
 {
-    return [UIColor redColor];
+    return [UIColor black25PercentColor];
 
 }
 +(UIColor *)sliderCellSliderMinTrackColor
 {
-    return [UIColor yellowColor];
+    return [UIColor chartreuseColor];
 
 }
 

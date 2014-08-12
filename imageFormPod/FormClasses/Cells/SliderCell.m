@@ -33,7 +33,7 @@ float sliderMinValue = 0.0;
 }
 -(void)mainSetup
 {
-
+    self.backgroundColor = [Styler mainBackground];
 }
 -(void)labelSetup
 {
