@@ -17,5 +17,6 @@
 
 @property (nonatomic, strong) NSURL *recordingS3Url;
 @property (nonatomic, strong) NSNumber *recordingLength;
+@property (nonatomic, strong) NSString *stringId;
 
 @end
