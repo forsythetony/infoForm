@@ -17,4 +17,5 @@ NSString * const labelDateTaken = @"Date Taken";
 NSString * const labelDateUploaded = @"Date Uploaded";
 NSString * const labelTakenBy = @"Taken By";
 NSString * const labelTitle = @"Title";
+NSString * const labelConfidence = @"Confidence";
 

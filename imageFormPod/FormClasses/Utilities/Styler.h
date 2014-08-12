@@ -60,4 +60,25 @@
 //  Text Alignment
 +(NSTextAlignment)footerButtonTextAlignment;
 +(CGFloat)footerButtonCornerRadius;
+
+/* 
+    Slider Cell Attributes
+*/
+
++(UIColor*)sliderCellTitleTextColor;
++(UIColor*)sliderCellTitleBackgroundColor;
++(UIFont*)sliderCellTitleFont;
++(NSTextAlignment)sliderCellTitleTextAlignment;
+
++(UIColor*)sliderCellValueLabelTextColor;
++(UIColor*)sliderCellvalueLabelBackgroundColor;
++(UIFont*)sliderCellValueLabelFont;
++(NSTextAlignment)sliderCellValueLabelTextAlignment;
+
++(UIColor*)sliderCellSliderMaxTrackColor;
++(UIColor*)sliderCellSliderMinTrackColor;
+
+
+
+
 @end

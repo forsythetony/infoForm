@@ -22,7 +22,8 @@
 
 typedef NS_ENUM(NSInteger, tfCellType) {
     tfCellTypeBasic,
-    tfCellTypeDate
+    tfCellTypeDate,
+    tfCellTypeSlider
 };
 
 @interface ImageFormConstants : NSObject

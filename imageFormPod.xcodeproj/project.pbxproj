@@ -16,6 +16,8 @@
 		BA365A3119913AF5008E6975 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA365A2F19913AF5008E6975 /* TextViewCell.m */; };
 		BA365A3219913AF5008E6975 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA365A3019913AF5008E6975 /* TextViewCell.xib */; };
 		BA365A35199144C2008E6975 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BA365A34199144C2008E6975 /* Constants.m */; };
+		BA6694421999E30400412313 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6694401999E30400412313 /* SliderCell.m */; };
+		BA6694431999E30400412313 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6694411999E30400412313 /* SliderCell.xib */; };
 		BAFC7FEA195F6F6F00E7B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */; };
 		BAFC7FEC195F6F6F00E7B494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */; };
 		BAFC7FEE195F6F6F00E7B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FED195F6F6F00E7B494 /* UIKit.framework */; };
@@ -67,6 +69,9 @@
 		BA365A3019913AF5008E6975 /* TextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewCell.xib; path = FormClasses/TextViewCell.xib; sourceTree = "<group>"; };
 		BA365A33199144C2008E6975 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = FormClasses/Constants.h; sourceTree = "<group>"; };
 		BA365A34199144C2008E6975 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = FormClasses/Constants.m; sourceTree = "<group>"; };
+		BA66943F1999E30400412313 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SliderCell.h; path = FormClasses/Cells/SliderCell.h; sourceTree = "<group>"; };
+		BA6694401999E30400412313 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SliderCell.m; path = FormClasses/Cells/SliderCell.m; sourceTree = "<group>"; };
+		BA6694411999E30400412313 /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SliderCell.xib; path = FormClasses/Cells/SliderCell.xib; sourceTree = "<group>"; };
 		BAFC7FE6195F6F6F00E7B494 /* imageFormPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFormPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +161,26 @@
 				BAFC8052195F97D700E7B494 /* BasicCell.xib */,
 			);
 			name = "Basic Cell";
+			sourceTree = "<group>";
+		};
+		BA6694381999E1C500412313 /* Text View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA365A2E19913AF5008E6975 /* TextViewCell.h */,
+				BA365A2F19913AF5008E6975 /* TextViewCell.m */,
+				BA365A3019913AF5008E6975 /* TextViewCell.xib */,
+			);
+			name = "Text View Cell";
+			sourceTree = "<group>";
+		};
+		BA66943E1999E2A300412313 /* Slider Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA66943F1999E30400412313 /* SliderCell.h */,
+				BA6694401999E30400412313 /* SliderCell.m */,
+				BA6694411999E30400412313 /* SliderCell.xib */,
+			);
+			name = "Slider Cell";
 			sourceTree = "<group>";
 		};
 		BAFC7FDD195F6F6F00E7B494 = {
@@ -268,11 +293,10 @@
 		BAFC8029195F767200E7B494 /* Cell Types */ = {
 			isa = PBXGroup;
 			children = (
+				BA6694381999E1C500412313 /* Text View Cell */,
 				BA365A59199592B8008E6975 /* Basic Cell */,
 				BA365A58199592AB008E6975 /* Date Cell */,
-				BA365A2E19913AF5008E6975 /* TextViewCell.h */,
-				BA365A2F19913AF5008E6975 /* TextViewCell.m */,
-				BA365A3019913AF5008E6975 /* TextViewCell.xib */,
+				BA66943E1999E2A300412313 /* Slider Cell */,
 			);
 			name = "Cell Types";
 			sourceTree = "<group>";
@@ -374,6 +398,7 @@
 			files = (
 				BAFC8002195F6F6F00E7B494 /* Images.xcassets in Resources */,
 				BA365A3219913AF5008E6975 /* TextViewCell.xib in Resources */,
+				BA6694431999E30400412313 /* SliderCell.xib in Resources */,
 				BAFC7FF4195F6F6F00E7B494 /* InfoPlist.strings in Resources */,
 				BAFC7FFD195F6F6F00E7B494 /* Main.storyboard in Resources */,
 				BAFC8031195F777400E7B494 /* DateCell.xib in Resources */,
@@ -440,6 +465,7 @@
 				BAFC804C195F90AC00E7B494 /* Styler.m in Sources */,
 				BAFC8030195F777400E7B494 /* DateCell.m in Sources */,
 				BAFC8000195F6F6F00E7B494 /* ViewController.m in Sources */,
+				BA6694421999E30400412313 /* SliderCell.m in Sources */,
 				BAFC7FFA195F6F6F00E7B494 /* AppDelegate.m in Sources */,
 				BA365A2819912733008E6975 /* FooterButton.m in Sources */,
 				BAFC8021195F731C00E7B494 /* InformationForm.m in Sources */,

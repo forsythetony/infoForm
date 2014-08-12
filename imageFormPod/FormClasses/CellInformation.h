@@ -28,6 +28,8 @@
 +(CellInformation*)createBasicCellWithTitle:(NSString*) title andValue:(NSString*) value andPlaceholderValue:(NSString*) placeholder andJSONKeyValue:(NSString*) JSONKey;
 +(CellInformation*)createDateCellWithTitle:(NSString*) title andDate:(NSDate*) date andJSONKeyValue:(NSString*) JSONKey andIsEditable:(BOOL) editability;
 
++(CellInformation*)createSliderCellWithTitle:(NSString*) title andValue:(NSNumber*) value andJSONKey:(NSString*) jsonKey;
+
 -(NSString*)getJSONKey;
 -(NSString*)getJSONValue;
 

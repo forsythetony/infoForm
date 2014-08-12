@@ -16,3 +16,4 @@ extern NSString * const keyDateTaken;
 extern NSString * const keyDateUploaded;
 extern NSString * const keyPhotographerName;
 extern NSString * const keyTitle;
+extern NSString * const labelConfidence;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SliderCell" id="KGk-i7-Jjw" customClass="SliderCell">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MH-Qr-qmi">
+                        <rect key="frame" x="20" y="5" width="180" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="66o-rM-AH7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QXf-j4-zMl">
+                        <rect key="frame" x="218" y="5" width="488" height="34"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </slider>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qb-Yz-Bhk">
+                        <rect key="frame" x="714" y="11" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1Qb-Yz-Bhk" secondAttribute="bottom" constant="11" id="FVx-Ti-TeU"/>
+                    <constraint firstItem="1Qb-Yz-Bhk" firstAttribute="leading" secondItem="QXf-j4-zMl" secondAttribute="trailing" constant="10" id="IQ3-g4-1AP"/>
+                    <constraint firstItem="QXf-j4-zMl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="MBX-Ag-Km7"/>
+                    <constraint firstAttribute="trailing" secondItem="1Qb-Yz-Bhk" secondAttribute="trailing" constant="12" id="RGI-j4-XXV"/>
+                    <constraint firstItem="1Qb-Yz-Bhk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="V8B-v2-jb3"/>
+                    <constraint firstItem="QXf-j4-zMl" firstAttribute="leading" secondItem="4MH-Qr-qmi" secondAttribute="trailing" constant="20" id="YtY-Ix-Ra3"/>
+                    <constraint firstAttribute="bottom" secondItem="4MH-Qr-qmi" secondAttribute="bottom" constant="5" id="a00-YE-LPD"/>
+                    <constraint firstItem="4MH-Qr-qmi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="bsz-X5-rgX"/>
+                    <constraint firstItem="4MH-Qr-qmi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="kXK-Gb-rgf"/>
+                    <constraint firstAttribute="bottom" secondItem="QXf-j4-zMl" secondAttribute="bottom" constant="5" id="ogc-Ln-11U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fieldTitleLabel" destination="4MH-Qr-qmi" id="cju-vA-tzd"/>
+                <outlet property="fieldValueLabel" destination="1Qb-Yz-Bhk" id="YH0-UF-EFj"/>
+                <outlet property="fieldValueSlider" destination="QXf-j4-zMl" id="20b-R6-Rq3"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

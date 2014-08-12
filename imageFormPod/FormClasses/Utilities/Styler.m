@@ -139,4 +139,67 @@
 {
     return 8.0;
 }
+
+/*
+    Slider Cell
+*/
+
+//  Fonts
+
++(UIFont *)sliderCellTitleFont
+{
+    CGFloat fontSize = 15.0;
+    
+    return [UIFont fontWithName:globalFont size:fontSize];
+
+}
++(UIFont *)sliderCellValueLabelFont
+{
+    CGFloat fontSize = 15.0;
+    
+    return [UIFont fontWithName:globalFont size:fontSize];
+}
+
+//  Colors
+
++(UIColor *)sliderCellTitleTextColor
+{
+    return [UIColor black25PercentColor];
+}
++(UIColor *)sliderCellTitleBackgroundColor
+{
+    return [UIColor clearColor];
+}
+
++(UIColor *)sliderCellValueLabelTextColor
+{
+    return [UIColor black25PercentColor];
+}
+
++(UIColor *)sliderCellvalueLabelBackgroundColor
+{
+    return [UIColor clearColor];
+}
+
++(UIColor *)sliderCellSliderMaxTrackColor
+{
+    return [UIColor redColor];
+
+}
++(UIColor *)sliderCellSliderMinTrackColor
+{
+    return [UIColor yellowColor];
+
+}
+
+//  Text Alignment
+
++(NSTextAlignment)sliderCellTitleTextAlignment
+{
+    return NSTextAlignmentLeft;
+}
++(NSTextAlignment)sliderCellValueLabelTextAlignment
+{
+    return NSTextAlignmentCenter;
+}
 @end

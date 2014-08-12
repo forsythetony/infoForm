@@ -10,6 +10,19 @@
 
 @implementation CellInformation
 
++(CellInformation *)createSliderCellWithTitle:(NSString *)title andValue:(NSNumber *)value andJSONKey:(NSString *)jsonKey
+{
+    CellInformation* info = [[self class] new];
+    
+    info.type = tfCellTypeSlider;
+    
+    info.fieldTitle = title;
+    info.fieldValue = value;
+    info.JSONKey = jsonKey;
+    
+    return info;
+    
+}
 +(CellInformation *)createDateCellWithTitle:(NSString *)title andDate:(NSDate *)date andJSONKeyValue:(NSString *)JSONKey
 {
     CellInformation* info = [[self class] new];

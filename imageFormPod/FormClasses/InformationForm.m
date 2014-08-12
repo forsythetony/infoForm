@@ -9,6 +9,7 @@
 #import "InformationForm.h"
 #import "PopOverDateViewController.h"
 #import "FooterButton.h"
+#import "SliderCell.h"
 
 @interface InformationForm () <UIPopoverControllerDelegate, BasicCellDelegate> {
     
@@ -146,7 +147,8 @@
 {
     static NSString *dateCellIdentifier = @"DateCell";
     static NSString *basicCellIdentifier = @"BasicCell";
-     
+    static NSString *sliderCellIdentifier = @"SliderCell";
+    
     CellInformation *info = _currentCells[indexPath.row];
 
     switch (info.type) {
@@ -187,6 +189,29 @@
             
             return customCell;
 
+        }
+            break;
+            
+        case tfCellTypeSlider: {
+            
+            SliderCell *sliderCell = (SliderCell*)[tableView dequeueReusableCellWithIdentifier:sliderCellIdentifier];
+            
+            if (sliderCell == nil) {
+                UINib *customNib = [UINib nibWithNibName:@"SliderCell" bundle:nil];
+                
+                [tableView registerNib:customNib forCellReuseIdentifier:sliderCellIdentifier];
+                
+                sliderCell = (SliderCell*)[tableView dequeueReusableCellWithIdentifier:sliderCellIdentifier];
+                
+                
+            }
+            
+            [sliderCell setup];
+            [sliderCell setInfo:info];
+            
+            return sliderCell;
+            
+            
         }
             break;
             
@@ -393,6 +418,11 @@
     
     [self addCellToEndWithInformation:dateUploadedInformation];
 
+    
+    CellInformation *sliderCell = [CellInformation createSliderCellWithTitle:labelConfidence andValue:@(10.0) andJSONKey:@"testKey"];
+    
+    [self addCellToEndWithInformation:sliderCell];
+    
     [UIView animateWithDuration:0.3 animations:^{
         [self.tableView setAlpha:0.3];
     }];
