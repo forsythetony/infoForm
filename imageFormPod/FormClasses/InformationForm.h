@@ -46,6 +46,7 @@
 -(void)enableFooter;
 
 -(void)updateFormWithInformation:(imageObject*) information;
+-(void)disableFooter;
 
 
 @end

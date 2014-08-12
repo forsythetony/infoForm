@@ -75,7 +75,7 @@
 {
     [self.view setBackgroundColor:[Styler mainBackground]];
     [self.tableView setBackgroundColor:[Styler mainBackground]];
-    
+    [theFooter setAlpha:0.0];
     [[self tableView] setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -434,9 +434,14 @@
     [UIView animateWithDuration:0.3 animations:^{
         [self.tableView setAlpha:0.3];
     }];
-
-    [theFooter setIsEnabled:NO];
     
+}
+-(void)disableFooter
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [theFooter setAlpha:0.0];
+        [theFooter setEnabled:NO];
+    });
 }
 -(void)enable
 {
@@ -507,7 +512,11 @@
 
 -(void)enableFooter
 {
-    [theFooter setIsEnabled:YES];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [theFooter setAlpha:1.0];
+        [theFooter setIsEnabled:YES];
+    });
 }
 -(void)updateFormWithInformation:(imageObject *)information
 {
@@ -538,7 +547,7 @@
     }
     
     _currentCells = [NSArray arrayWithArray:cells];
-    
+    [self disableFooter];
     [[self tableView] reloadData];
 }
 @end
