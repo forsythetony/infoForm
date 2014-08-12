@@ -19,7 +19,7 @@
     info.fieldTitle = title;
     info.fieldValue = value;
     info.JSONKey = jsonKey;
-    
+    info.cellHeight = 45.0;
     return info;
     
 }

@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MH-Qr-qmi">
-                        <rect key="frame" x="20" y="5" width="180" height="33"/>
+                        <rect key="frame" x="0.0" y="5" width="180" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="66o-rM-AH7"/>
@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QXf-j4-zMl">
-                        <rect key="frame" x="218" y="5" width="488" height="34"/>
+                        <rect key="frame" x="198" y="5" width="508" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </slider>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qb-Yz-Bhk">
@@ -43,7 +43,7 @@
                     <constraint firstItem="QXf-j4-zMl" firstAttribute="leading" secondItem="4MH-Qr-qmi" secondAttribute="trailing" constant="20" id="YtY-Ix-Ra3"/>
                     <constraint firstAttribute="bottom" secondItem="4MH-Qr-qmi" secondAttribute="bottom" constant="5" id="a00-YE-LPD"/>
                     <constraint firstItem="4MH-Qr-qmi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="bsz-X5-rgX"/>
-                    <constraint firstItem="4MH-Qr-qmi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="kXK-Gb-rgf"/>
+                    <constraint firstItem="4MH-Qr-qmi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kXK-Gb-rgf"/>
                     <constraint firstAttribute="bottom" secondItem="QXf-j4-zMl" secondAttribute="bottom" constant="5" id="ogc-Ln-11U"/>
                 </constraints>
             </tableViewCellContentView>

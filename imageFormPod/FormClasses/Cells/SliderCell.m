@@ -58,6 +58,15 @@ float sliderMinValue = 0.0;
     [fieldValueSlider setMaximumValue:sliderMaxValue];
     [fieldValueSlider setValue:0.0];
     
+    [fieldValueSlider addTarget:self action:@selector(updateSlider:) forControlEvents:UIControlEventValueChanged];
+    
+    
+    
+}
+-(void)updateSlider:(UISlider*) sender
+{
+    [self updateSliderValueWithNumber:@([sender value])];
+    _info.fieldValue = @([sender value]);
     
 }
 -(void)updateSliderValueWithNumber:(NSNumber*) newValue
@@ -81,7 +90,11 @@ float sliderMinValue = 0.0;
 {
     _info = info;
     [self updateSliderValueWithNumber:(NSNumber*)info.fieldValue];
-    fieldTitleLabel.text = info.fieldTitle;
+    
+    //  Field Title
+    
+    fieldTitleLabel.text = [info.fieldTitle addColonForTitle];
     
 }
+
 @end

@@ -196,7 +196,7 @@
 
 +(NSTextAlignment)sliderCellTitleTextAlignment
 {
-    return NSTextAlignmentLeft;
+    return NSTextAlignmentRight;
 }
 +(NSTextAlignment)sliderCellValueLabelTextAlignment
 {

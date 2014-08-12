@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CellInformation.h"
+#import "NSString+stringHandlers.h"
 
 @interface SliderCell : UITableViewCell
 
