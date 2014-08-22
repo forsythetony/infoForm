@@ -7,6 +7,7 @@
 //
 
 #import "imageObject.h"
+#import "Constants.h"
 
 @implementation imageObject
 
@@ -14,7 +15,7 @@
 {
     return [NSMutableDictionary dictionaryWithObjects:@[(_title ? _title : @"empty")
                                                         ]
-                                              forKeys:@[fieldTypeTitle]];
+                                              forKeys:@[[Constants getFieldTypeTitle]]];
     
 }
 -(void)addStory:(Story *)newStory

@@ -20,7 +20,6 @@
 		BA6694431999E30400412313 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6694411999E30400412313 /* SliderCell.xib */; };
 		BA66944F1999F81100412313 /* imageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66944B1999F81100412313 /* imageObject.m */; };
 		BA6694501999F81100412313 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66944E1999F81100412313 /* Story.m */; };
-		BA6694531999F8F200412313 /* imageInformationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6694521999F8F200412313 /* imageInformationConstants.m */; };
 		BAFC7FEA195F6F6F00E7B494 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */; };
 		BAFC7FEC195F6F6F00E7B494 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */; };
 		BAFC7FEE195F6F6F00E7B494 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFC7FED195F6F6F00E7B494 /* UIKit.framework */; };
@@ -79,8 +78,6 @@
 		BA66944C1999F81100412313 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Story.h; path = FormClasses/Story.h; sourceTree = "<group>"; };
 		BA66944D1999F81100412313 /* imageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageObject.h; path = FormClasses/imageObject.h; sourceTree = "<group>"; };
 		BA66944E1999F81100412313 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Story.m; path = FormClasses/Story.m; sourceTree = "<group>"; };
-		BA6694511999F8F200412313 /* imageInformationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageInformationConstants.h; path = FormClasses/imageInformationConstants.h; sourceTree = "<group>"; };
-		BA6694521999F8F200412313 /* imageInformationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imageInformationConstants.m; path = FormClasses/imageInformationConstants.m; sourceTree = "<group>"; };
 		BAFC7FE6195F6F6F00E7B494 /* imageFormPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFormPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFC7FE9195F6F6F00E7B494 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BAFC7FEB195F6F6F00E7B494 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -195,11 +192,9 @@
 		BA6694441999F7A100412313 /* Add ons */ = {
 			isa = PBXGroup;
 			children = (
-				BA6694511999F8F200412313 /* imageInformationConstants.h */,
-				BA6694521999F8F200412313 /* imageInformationConstants.m */,
 				BA66944B1999F81100412313 /* imageObject.m */,
-				BA66944C1999F81100412313 /* Story.h */,
 				BA66944D1999F81100412313 /* imageObject.h */,
+				BA66944C1999F81100412313 /* Story.h */,
 				BA66944E1999F81100412313 /* Story.m */,
 			);
 			name = "Add ons";
@@ -489,7 +484,6 @@
 				BAFC804C195F90AC00E7B494 /* Styler.m in Sources */,
 				BAFC8030195F777400E7B494 /* DateCell.m in Sources */,
 				BA66944F1999F81100412313 /* imageObject.m in Sources */,
-				BA6694531999F8F200412313 /* imageInformationConstants.m in Sources */,
 				BAFC8000195F6F6F00E7B494 /* ViewController.m in Sources */,
 				BA6694421999E30400412313 /* SliderCell.m in Sources */,
 				BAFC7FFA195F6F6F00E7B494 /* AppDelegate.m in Sources */,

@@ -430,7 +430,7 @@
     [self addCellToEndWithInformation:dateUploadedInformation];
 
     
-    CellInformation *sliderCell = [CellInformation createSliderCellWithTitle:labelConfidence andValue:@(10.0) andJSONKey:@"testKey"];
+    CellInformation *sliderCell = [CellInformation createSliderCellWithTitle:[Constants getLabelConfidence] andValue:@(10.0) andJSONKey:@"testKey"];
     
     [self addCellToEndWithInformation:sliderCell];
     

@@ -60,4 +60,21 @@
 {
     return @"Uploaded By";
 }
+
+/*
+    Image Information Constants
+*/
+
++(NSString *)getFieldTypeTitle
+{
+    return @"fieldTitle";
+}
++(NSString *)getFieldTypeDateTaken
+{
+    return @"fieldDateTaken";
+}
++(NSString *)getFieldTypeHasEdited
+{
+    return @"fieldTypeHasEdited";
+}
 @end

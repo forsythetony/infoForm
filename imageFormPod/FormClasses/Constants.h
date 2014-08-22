@@ -25,5 +25,11 @@
 +(NSString*)getKeyTitle;
 
 
+/*
+    Image Information Constants
+*/
++(NSString*)getFieldTypeTitle;
++(NSString*)getFieldTypeDateTaken;
++(NSString*)getFieldTypeHasEdited;
 
 @end

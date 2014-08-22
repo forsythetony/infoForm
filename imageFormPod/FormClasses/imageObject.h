@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "imageInformationConstants.h"
 #import "Story.h"
 
 @interface imageObject : NSObject
