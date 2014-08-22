@@ -8,16 +8,56 @@
 
 #import "Constants.h"
 
-NSString * const keyDateTaken = @"keyDateTakenJSON";
-NSString * const keyDateUploaded = @"keyDateUploadedJSON";
-NSString * const keyPhotographerName = @"keyPhotographerNameJSON";
-NSString * const keyTitle = @"keyTitleJSON";
+@implementation Constants
 
-NSString * const labelDateTaken = @"Date Taken";
-NSString * const labelDateUploaded = @"Date Uploaded";
-NSString * const labelTakenBy = @"Taken By";
-NSString * const labelTitle = @"Title";
-NSString * const labelConfidence = @"Confidence";
+/*
+    Keys
+*/
++(NSString *)getKeyDateTaken
+{
+    return @"keyDateTakenJSON";
+}
 
-NSString * const labelUploadedBy = @"Uploader";
++(NSString *)getKeyDateUploaded
+{
+    return @"keyDateUploadedJSON";
+}
 
++(NSString *)getKeyPhotographerName
+{
+    return @"keyPhotographerNameJSON";
+}
+
++(NSString *)getKeyTitle
+{
+    return @"keyTitleJSON";
+}
+
+/*
+    Labels
+*/
++(NSString *)getLabelDateTaken
+{
+    return @"Date Taken";
+}
++(NSString *)getLabelTakenBy
+{
+    return @"Taken By";
+}
++(NSString *)getLabelDateUploaded
+{
+    return @"Date Uploaded";
+}
++(NSString *)getLabelTitle
+{
+    return @"Title";
+}
++(NSString *)getLabelConfidence
+{
+    return @"Confidence";
+}
++(NSString *)getLabelUploadedBy
+{
+    return @"Uploaded By";
+}
+@end

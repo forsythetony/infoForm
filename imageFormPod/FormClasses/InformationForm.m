@@ -397,20 +397,23 @@
 {
     
     
-    CellInformation *titleInformation = [CellInformation createBasicCellWithTitle:labelTitle
+    CellInformation *titleInformation = [CellInformation createBasicCellWithTitle:[Constants getLabelTitle]
                                                                          andValue:@""
                                                               andPlaceholderValue:@"Title"
-                                                                  andJSONKeyValue:keyTitle];
+                                                                  andJSONKeyValue:[Constants getKeyTitle]];
     [self addCellWithInformation:titleInformation];
     
     
-    CellInformation *takenByInformation = [CellInformation createBasicCellWithTitle:labelTakenBy andValue:@"" andPlaceholderValue:@"Name" andJSONKeyValue:keyPhotographerName];
+    CellInformation *takenByInformation = [CellInformation createBasicCellWithTitle:[Constants getLabelTakenBy]
+                                                                           andValue:@""
+                                                                andPlaceholderValue:@"Name"
+                                                                    andJSONKeyValue:[Constants getKeyPhotographerName]];
     
     [self addCellToEndWithInformation:takenByInformation];
     
-    CellInformation *dateTakenInformation = [CellInformation createDateCellWithTitle:labelDateTaken
+    CellInformation *dateTakenInformation = [CellInformation createDateCellWithTitle:[Constants getLabelDateTaken]
                                                                              andDate:[NSDate date]
-                                                                     andJSONKeyValue:keyDateTaken
+                                                                     andJSONKeyValue:[Constants getKeyDateTaken]
                                                                        andIsEditable:YES];
     
     [self addCellToEndWithInformation:dateTakenInformation];
@@ -419,9 +422,9 @@
     
     
     
-    CellInformation *dateUploadedInformation = [CellInformation createDateCellWithTitle:labelDateUploaded
+    CellInformation *dateUploadedInformation = [CellInformation createDateCellWithTitle:[Constants getLabelDateUploaded]
                                                                                 andDate:[NSDate date]
-                                                                        andJSONKeyValue:keyDateUploaded
+                                                                        andJSONKeyValue:[Constants getKeyDateUploaded]
                                                                           andIsEditable:NO];
     
     [self addCellToEndWithInformation:dateUploadedInformation];
@@ -462,7 +465,7 @@
     
     for (CellInformation* info in _currentCells) {
         
-        if (info.fieldTitle == keyTitle) {
+        if (info.fieldTitle == [Constants getKeyTitle]) {
             
             indexOfInfo = [_currentCells indexOfObject:info];
         }
@@ -532,18 +535,18 @@
     NSString *confidence = information.confidence;
     
     if (titleString) {
-        [cells addObject:[CellInformation createBasicCellWithTitle:labelTitle andValue:titleString andPlaceholderValue:@"Title" andJSONKeyValue:@"aKey" andEditability:YES]];
+        [cells addObject:[CellInformation createBasicCellWithTitle:[Constants getLabelTitle] andValue:titleString andPlaceholderValue:@"Title" andJSONKeyValue:@"aKey" andEditability:YES]];
     }
     if (uploader) {
-        [cells addObject:[CellInformation createBasicCellWithTitle:labelUploadedBy andValue:uploader andPlaceholderValue:@"Name" andJSONKeyValue:@"jsonUploader" andEditability:NO]];
+        [cells addObject:[CellInformation createBasicCellWithTitle:[Constants getLabelUploadedBy] andValue:uploader andPlaceholderValue:@"Name" andJSONKeyValue:@"jsonUploader" andEditability:NO]];
     }
     if (dateTaken) {
-        [cells addObject:[CellInformation createDateCellWithTitle:labelDateTaken andDate:dateTaken andJSONKeyValue:@"jsonDateTaken" andIsEditable:YES]];
+        [cells addObject:[CellInformation createDateCellWithTitle:[Constants getLabelDateTaken] andDate:dateTaken andJSONKeyValue:@"jsonDateTaken" andIsEditable:YES]];
     }
     
     if (confidence) {
         
-        [cells addObject:[CellInformation createSliderCellWithTitle:labelConfidence andValue:[confidence convertStringToNumber] andJSONKey:@"jsonConfidence"]];
+        [cells addObject:[CellInformation createSliderCellWithTitle:[Constants getLabelConfidence] andValue:[confidence convertStringToNumber] andJSONKey:@"jsonConfidence"]];
     }
     
     _currentCells = [NSArray arrayWithArray:cells];
